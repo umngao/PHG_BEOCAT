@@ -1,0 +1,29 @@
+# Ignore everything 
+*
+
+#except these
+!.gitignore
+!SampleScripts/
+!SampleScripts/*
+!SampleScripts/*/*
+!SampleScripts/*/*/*
+!SampleScripts/*/*/*/*
+!SampleScripts/*/*/*/*/*
+!DataFolders/
+!DataFolders/*
+!DataFolders/*/*
+!DataFolders/*/*/*
+DataFolders/bam/*
+DataFolders/reference/*
+!archive/
+!archive/*
+!archive/*/*
+!archive/*/*/*
+!archive/*/*/*/*
+!archive/*/*/*/*/*
+!*.Rmd
+!*.md
+!raw_ks_gbs_demulti/
+!raw_ks_gbs_demulti/*.txt
+
+

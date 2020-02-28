@@ -1,0 +1,39 @@
+/CreateHaplotypesFromGVCF.groovy: line 4: //Steps: No such file or directory
+/CreateHaplotypesFromGVCF.groovy: line 5: //1.: No such file or directory
+/CreateConsensi.sh: line 29: [: !=: unary operator expected
+/CreateConsensi.sh: line 35: [: !=: unary operator expected
+/CreateConsensi.sh: line 44: [: !=: unary operator expected
+/CreateConsensi.sh: line 53: [: !=: unary operator expected
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_CTYPE = "en_US.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+/CreateHaplotypesFromGVCF.groovy: line 7: Rscripts: command not found
+/CreateHaplotypesFromGVCF.groovy: line 8: Rscripts/: Is a directory
+/CreateHaplotypesFromGVCF.groovy: line 9: tempFileDir: command not found
+/CreateHaplotypesFromGVCF.groovy: line 10: tasselRunPipeline: command not found
+/CreateHaplotypesFromGVCF.groovy: line 11: fullXmx: command not found
+/CreateHaplotypesFromGVCF.groovy: line 12: extendedWindowSize: command not found
+/CreateHaplotypesFromGVCF.groovy: line 13: refRangeMethodList: command not found
+/CreateConsensi.sh: line 29: [: !=: unary operator expected
+/CreateConsensi.sh: line 35: [: !=: unary operator expected
+/CreateConsensi.sh: line 44: [: !=: unary operator expected
+/CreateConsensi.sh: line 53: [: !=: unary operator expected
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_CTYPE = "en_US.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+/CreateHaplotypesFromGVCF.groovy: line 16: Rscripts: command not found
+/CreateHaplotypesFromGVCF.groovy: line 17: Rscripts: command not found
+/CreateHaplotypesFromGVCF.groovy: line 18: Rscripts: command not found
+/CreateHaplotypesFromGVCF.groovy: line 19: Rscripts/: Is a directory
+/CreateHaplotypesFromGVCF.groovy: line 20: syntax error near unexpected token `('
+/CreateHaplotypesFromGVCF.groovy: line 20: `def parseArguments(args) {'

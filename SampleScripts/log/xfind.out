@@ -1,0 +1,470 @@
++ TEMP_DIR=/tempFileDir
++ OUTPUT_DIR=/tempFileDir/outputDir/
++ DATA_DIR=/tempFileDir/data
++ REFERENCE_DIR=/tempFileDir/data/reference
++ FASTQ_DIR=/tempFileDir/data/fastq
++ PANGENOME_DIR=/tempFileDir/outputDir//pangenome
++ FASTQ_HAP_COUNT_DIR=/tempFileDir/outputDir//fastq_hap_count/
++ '[' '!' -d /tempFileDir/outputDir//fastq_hap_count/ ']'
++ mkdir /tempFileDir/outputDir//fastq_hap_count/
++ HAP_COUNT_BEST_PATH_DIR=/tempFileDir/outputDir//hap_count_best_path
++ '[' '!' -d /tempFileDir/outputDir//hap_count_best_path ']'
++ mkdir /tempFileDir/outputDir//hap_count_best_path
++ '[' '!' -d /tempFileDir/outputDir//pangenome ']'
++ BASE_HAPLOTYPE_NAME=wheat1ABD_pangenome_fasta
++ CONFIGFILE=/tempFileDir/data/configSQLite.txt
++ CONFIGFILE_NAME=configSQLite.txt
++ HAPLOTYPE_METHOD=CONSENSUS
++ HAPLOTYPE_METHOD_FIND_PATH=CONSENSUS,refRegionGroup
++ HAP_COUNT_METHOD=HAP_COUNT_METHOD
++ PATH_METHOD=PATH_METHOD2
++ KEY_FILE=/tempFileDir/data/fastq/200228.key.KS.gbs.rand3.txt
++ PATH_KEY_FILE=/tempFileDir/data/fastq/200228.key.KS.gbs.rand3_pathKeyFile.txt
++ REF_RANGE_FILE=
++ '[' '!' -z '' ']'
++ HAPLOTYPE_FASTA=/tempFileDir/outputDir//pangenome/wheat1ABD_pangenome_fasta.fa
++ HAPLOTYPE_INDEX=/tempFileDir/outputDir//pangenome/wheat1ABD_pangenome_fasta.mmi
++ fullXmx=
+++ grep '^Xmx=' /tempFileDir/data/configSQLite.txt
+++ cut -d= -f2
++ memoryString=60G
++ '[' 60G '!=' '' ']'
++ fullXmx=-Xmx60G
++ TAXA_LIST_FLAG=
+++ grep '^filterTaxaList=' /tempFileDir/data/configSQLite.txt
+++ cut -d= -f2
++ filterTaxaList=
++ '[' '!=' '' ']'
+/FindPathMinimap2.sh: line 71: [: !=: unary operator expected
++ REF_RANGE_FILE_FLAG=
++ '[' '!' -z '' ']'
++ /tassel-5-standalone/run_pipeline.pl -debug -Xmx60G -configParameters /tempFileDir/data/configSQLite.txt -HaplotypeGraphBuilderPlugin -configFile /tempFileDir/data/configSQLite.txt -methods CONSENSUS -includeVariantContexts false -includeSequences false -endPlugin -FastqToMappingPlugin -minimap2IndexFile /tempFileDir/outputDir//pangenome/wheat1ABD_pangenome_fasta.mmi -keyFile /tempFileDir/data/fastq/200228.key.KS.gbs.rand3.txt -fastqDir /tempFileDir/data/fastq/ -methodName HAP_COUNT_METHOD -methodDescription READ_MAPPING_DESCRIPTION -debugDir /tempFileDir/outputDir/ -endPlugin
+/tassel-5-standalone/lib/ahocorasick-0.2.4.jar:/tassel-5-standalone/lib/biojava-alignment-4.0.0.jar:/tassel-5-standalone/lib/biojava-core-4.0.0.jar:/tassel-5-standalone/lib/biojava-phylo-4.0.0.jar:/tassel-5-standalone/lib/colt-1.2.0.jar:/tassel-5-standalone/lib/commons-codec-1.10.jar:/tassel-5-standalone/lib/commons-math3-3.4.1.jar:/tassel-5-standalone/lib/ejml-0.23.jar:/tassel-5-standalone/lib/fastutil-8.2.2.jar:/tassel-5-standalone/lib/forester-1.038.jar:/tassel-5-standalone/lib/gs-core-1.3.jar:/tassel-5-standalone/lib/gs-ui-1.3.jar:/tassel-5-standalone/lib/guava-22.0.jar:/tassel-5-standalone/lib/htsjdk-2.19.0.jar:/tassel-5-standalone/lib/itextpdf-5.1.0.jar:/tassel-5-standalone/lib/javax.json-1.0.4.jar:/tassel-5-standalone/lib/jcommon-1.0.23.jar:/tassel-5-standalone/lib/jfreechart-1.0.19.jar:/tassel-5-standalone/lib/jfreesvg-3.2.jar:/tassel-5-standalone/lib/jhdf5-14.12.5.jar:/tassel-5-standalone/lib/json-simple-1.1.1.jar:/tassel-5-standalone/lib/junit-4.10.jar:/tassel-5-standalone/lib/kotlin-stdlib-1.3.50.jar:/tassel-5-standalone/lib/kotlinx-coroutines-core-1.3.0.jar:/tassel-5-standalone/lib/log4j-1.2.13.jar:/tassel-5-standalone/lib/mail-1.4.jar:/tassel-5-standalone/lib/phg.jar:/tassel-5-standalone/lib/postgresql-9.4-1201.jdbc41.jar:/tassel-5-standalone/lib/scala-library-2.10.1.jar:/tassel-5-standalone/lib/slf4j-api-1.7.10.jar:/tassel-5-standalone/lib/slf4j-simple-1.7.10.jar:/tassel-5-standalone/lib/snappy-java-1.1.1.6.jar:/tassel-5-standalone/lib/sqlite-jdbc-3.8.5-pre1.jar:/tassel-5-standalone/lib/trove-3.0.3.jar:/tassel-5-standalone/sTASSEL.jar
+Memory Settings: -Xms512m -Xmx60G
+Tassel Pipeline Arguments: -debug -configParameters /tempFileDir/data/configSQLite.txt -HaplotypeGraphBuilderPlugin -configFile /tempFileDir/data/configSQLite.txt -methods CONSENSUS -includeVariantContexts false -includeSequences false -endPlugin -FastqToMappingPlugin -minimap2IndexFile /tempFileDir/outputDir//pangenome/wheat1ABD_pangenome_fasta.mmi -keyFile /tempFileDir/data/fastq/200228.key.KS.gbs.rand3.txt -fastqDir /tempFileDir/data/fastq/ -methodName HAP_COUNT_METHOD -methodDescription READ_MAPPING_DESCRIPTION -debugDir /tempFileDir/outputDir/ -endPlugin
+[main] INFO net.maizegenetics.plugindef.ParameterCache - load: loading parameter cache with: /tempFileDir/data/configSQLite.txt
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: password value: sqlite
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: LoadHaplotypesFromGVCFPlugin.referenceFasta value: /tempFileDir/data/reference/wheat_chr1A1B1D.fa
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: LoadHaplotypesFromGVCFPlugin.haplotypeMethodDescription value: "groovy from gvcf"
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: numThreads value: 10
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: LoadHaplotypesFromGVCFPlugin.gvcfDir value: /tempFileDir/data/outputs/gvcfs/
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: Xmx value: 60G
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: extendedWindowSize value: 1000
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: minTransitionProb value: 0.001
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: referenceFasta value: /tempFileDir/data/reference/wheat_chr1A1B1D.fa
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: LoadHaplotypesFromGVCFPlugin.haplotypeMethodName value: HAPLOTYPES_METHOD
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: minReads value: 0
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: host value: localHost
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: DBtype value: sqlite
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: includeVariants value: true
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: probCorrect value: 0.99
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: BestHaplotypePathPlugin.minTaxa value: 1
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: DB value: /tempFileDir/outputDir/group3_wheat1A1B1D.db
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: configFile value: /tempFileDir/data/configSQLite.txt
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: maxReads value: 100
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: maxNodes value: 30
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: LoadHaplotypesFromGVCFPlugin.keyFile value: /tempFileDir/data/asub_gvcf_keyfile.txt
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: maxError value: 0.2
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: assemblyEntryPoint value: all
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: mxDiv value: .001
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: user value: sqlite
+[main] INFO net.maizegenetics.tassel.TasselLogging - Tassel Version: 5.2.60  Date: February 20, 2020
+[main] INFO net.maizegenetics.tassel.TasselLogging - Max Available Memory Reported by JVM: 54613 MB
+[main] INFO net.maizegenetics.tassel.TasselLogging - Java Version: 1.8.0_191
+[main] INFO net.maizegenetics.tassel.TasselLogging - OS: Linux
+[main] INFO net.maizegenetics.tassel.TasselLogging - Number of Processors: 112
+[main] INFO net.maizegenetics.pipeline.TasselPipeline - Tassel Pipeline Arguments: [-fork1, -HaplotypeGraphBuilderPlugin, -configFile, /tempFileDir/data/configSQLite.txt, -methods, CONSENSUS, -includeVariantContexts, false, -includeSequences, false, -endPlugin, -FastqToMappingPlugin, -minimap2IndexFile, /tempFileDir/outputDir//pangenome/wheat1ABD_pangenome_fasta.mmi, -keyFile, /tempFileDir/data/fastq/200228.key.KS.gbs.rand3.txt, -fastqDir, /tempFileDir/data/fastq/, -methodName, HAP_COUNT_METHOD, -methodDescription, READ_MAPPING_DESCRIPTION, -debugDir, /tempFileDir/outputDir/, -endPlugin, -runfork1]
+net.maizegenetics.pangenome.api.HaplotypeGraphBuilderPlugin
+   net.maizegenetics.pangenome.hapCalling.FastqToMappingPlugin
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.pangenome.api.HaplotypeGraphBuilderPlugin: time: Feb 28, 2020 16:20:40
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - 
+HaplotypeGraphBuilderPlugin Parameters
+configFile: /tempFileDir/data/configSQLite.txt
+methods: CONSENSUS
+includeSequences: false
+includeVariantContexts: false
+haplotypeIds: null
+chromosomes: null
+
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.DBLoadingUtils - first connection: dbName from config file = /tempFileDir/outputDir/group3_wheat1A1B1D.db host: localHost user: sqlite type: sqlite
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.DBLoadingUtils - Database URL: jdbc:sqlite:/tempFileDir/outputDir/group3_wheat1A1B1D.db
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.DBLoadingUtils - Connected to database:  
+
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - referenceRangesAsMap: query statement: select reference_ranges.ref_range_id, chrom, range_start, range_end, methods.name from reference_ranges  INNER JOIN ref_range_ref_range_method on ref_range_ref_range_method.ref_range_id=reference_ranges.ref_range_id  INNER JOIN methods on ref_range_ref_range_method.method_id = methods.method_id  AND methods.method_type = 7 ORDER BY reference_ranges.ref_range_id
+methods size: 1
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - referenceRangesAsMap: number of reference ranges: 26508
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - referenceRangesAsMap: time: 0.210773076 secs.
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - taxaListMap: query statement: SELECT gamete_haplotypes.gamete_grp_id, genotypes.line_name FROM gamete_haplotypes INNER JOIN gametes ON gamete_haplotypes.gameteid = gametes.gameteid INNER JOIN genotypes on gametes.genoid = genotypes.genoid ORDER BY gamete_haplotypes.gamete_grp_id;
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - taxaListMap: number of taxa lists: 8
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - taxaListMap: time: 0.005084141 secs.
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createHaplotypeNodes: haplotype method: CONSENSUS range group method: null
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createHaplotypeNodes: query statement: SELECT haplotypes_id, gamete_grp_id, haplotypes.ref_range_id, seq_hash, seq_len FROM haplotypes WHERE method_id = 5;
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - addNodes: number of nodes: 14305
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - addNodes: number of reference ranges: 13253
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createHaplotypeNodes: time: 0.208236589 secs.
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.HaplotypeGraph - Created graph edges: created when requested  number of nodes: 14305  number of reference ranges: 13253
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Finished net.maizegenetics.pangenome.api.HaplotypeGraphBuilderPlugin: time: Feb 28, 2020 16:20:41
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.pangenome.hapCalling.FastqToMappingPlugin: time: Feb 28, 2020 16:20:41
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - 
+FastqToMappingPlugin Parameters
+minimap2IndexFile: /tempFileDir/outputDir//pangenome/wheat1ABD_pangenome_fasta.mmi
+keyFile: /tempFileDir/data/fastq/200228.key.KS.gbs.rand3.txt
+fastqDir: /tempFileDir/data/fastq/
+maxRefRangeErr: 0.25
+lowMemMode: true
+maxSecondary: 20
+minimapLocation: minimap2
+methodName: HAP_COUNT_METHOD
+methodDescription: READ_MAPPING_DESCRIPTION
+debugDir: /tempFileDir/outputDir/
+outputSecondaryStats: false
+
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.DBLoadingUtils - first connection: dbName from config file = /tempFileDir/outputDir/group3_wheat1A1B1D.db host: localHost user: sqlite type: sqlite
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.DBLoadingUtils - Database URL: jdbc:sqlite:/tempFileDir/outputDir/group3_wheat1A1B1D.db
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.DBLoadingUtils - Connected to database:  
+
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess - db is setup, init prepared statements, load hash table
+
+ beginning - isSqlite is true
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all geneotypes in genotype table=4
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - refRangeRefRangeIDMap is null, creating new one with size : 26508
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadAnchorHash: at end, size of refRangeRefRangeIDMap: 26508, number of rs.next processed: 26508
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all methods in method table=5
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all groups in gamete_groups table=8
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all gametes in gametes table=4
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading readMappingHash, size of all read_mappings in read_mapping table=0
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Setting up MinimapRun for: cultivar AC_Avonlea, flowcell_lane C168LACXX_4_gbs.
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Running Minimap2 Command:
+minimap2 -ax sr -t 110 --secondary=yes -N20 --eqx /tempFileDir/outputDir//pangenome/wheat1ABD_pangenome_fasta.mmi /tempFileDir/data/fastq/AC_Avonlea.fq.gz
+[M::main::0.377*1.00] loaded/built the index for 14305 target sequence(s)
+[M::mm_mapopt_update::0.377*1.00] mid_occ = 1000
+[M::mm_idx_stat] kmer size: 21; skip: 11; is_hpc: 0; #seq: 14305
+[M::mm_idx_stat::0.445*1.00] distinct minimizers: 5802329 (72.71% are singletons); average occurrences: 1.419; average spacing: 6.120; total length: 50399943
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Time spent setting up run: Taxon:AC_Avonlea : 2.281272422sec
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Running in Low memory mode.  Simply counting the number of reads which hit a given set of haplotype ids
+[M::worker_pipeline::5.189*5.53] mapped 574713 sequences
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Processed 1000000 alignments.
+[M::worker_pipeline::7.439*3.95] mapped 574713 sequences
+[M::worker_pipeline::8.125*3.63] mapped 130164 sequences
+[M::main] Version: 2.17-r974-dirty
+[M::main] CMD: minimap2 -ax sr -t 110 --secondary=yes -N20 --eqx /tempFileDir/outputDir//pangenome/wheat1ABD_pangenome_fasta.mmi /tempFileDir/data/fastq/AC_Avonlea.fq.gz
+[M::main] Real time: 8.164 sec; CPU: 29.554 sec; Peak RSS: 0.709 GB
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - TotalTiming For samReader.next:5.2563891709998
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Time spent processing SAM: Taxon:AC_Avonlea : 6.050212031sec
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Done running minimap2 for: cultivar AC_Avonlea, flowcell_lane C168LACXX_4_gbs
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Compressing ReadMappings into GZipped Json.
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Done Compressing ReadMappings.  Pushing it to the DB.
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putMethod: added method HAP_COUNT_METHOD to methods table
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all methods in method table=6
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putReadMappingData: creating genotypes data for taxon AC_Avonlea
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putReadMappingData: genotypes insert: INSERT INTO genotypes (ploidy, is_reference, line_name, line_data,isPhasedAcrossGenes,isPhasedAcrossChromosomes) values (2,0,'AC_Avonlea','genotype for creating the path',0,0);
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Debug Output Dir Specified:  Writing file:/tempFileDir/outputDir/AC_Avonlea_C168LACXX_4_gbs_ReadMapping.txt
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Done processing cultivar AC_Avonlea, flowcell_lane C168LACXX_4_gbs.  Moving on to next keyfile Entry.
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Setting up MinimapRun for: cultivar Buteo, flowcell_lane C168LACXX_4_gbs.
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Running Minimap2 Command:
+minimap2 -ax sr -t 110 --secondary=yes -N20 --eqx /tempFileDir/outputDir//pangenome/wheat1ABD_pangenome_fasta.mmi /tempFileDir/data/fastq/Buteo.fq.gz
+[M::main::0.370*1.00] loaded/built the index for 14305 target sequence(s)
+[M::mm_mapopt_update::0.370*1.00] mid_occ = 1000
+[M::mm_idx_stat] kmer size: 21; skip: 11; is_hpc: 0; #seq: 14305
+[M::mm_idx_stat::0.439*1.00] distinct minimizers: 5802329 (72.71% are singletons); average occurrences: 1.419; average spacing: 6.120; total length: 50399943
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Time spent setting up run: Taxon:Buteo : 2.239829927sec
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Running in Low memory mode.  Simply counting the number of reads which hit a given set of haplotype ids
+[M::worker_pipeline::4.140*6.70] mapped 574713 sequences
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Processed 1000000 alignments.
+[M::worker_pipeline::5.980*4.74] mapped 574713 sequences
+[M::worker_pipeline::6.748*4.22] mapped 152130 sequences
+[M::main] Version: 2.17-r974-dirty
+[M::main] CMD: minimap2 -ax sr -t 110 --secondary=yes -N20 --eqx /tempFileDir/outputDir//pangenome/wheat1ABD_pangenome_fasta.mmi /tempFileDir/data/fastq/Buteo.fq.gz
+[M::main] Real time: 6.789 sec; CPU: 28.536 sec; Peak RSS: 2.099 GB
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - TotalTiming For samReader.next:4.109555509000606
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Time spent processing SAM: Taxon:Buteo : 4.929205979sec
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Done running minimap2 for: cultivar Buteo, flowcell_lane C168LACXX_4_gbs
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Compressing ReadMappings into GZipped Json.
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Done Compressing ReadMappings.  Pushing it to the DB.
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putReadMappingData: creating genotypes data for taxon Buteo
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putReadMappingData: genotypes insert: INSERT INTO genotypes (ploidy, is_reference, line_name, line_data,isPhasedAcrossGenes,isPhasedAcrossChromosomes) values (2,0,'Buteo','genotype for creating the path',0,0);
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Debug Output Dir Specified:  Writing file:/tempFileDir/outputDir/Buteo_C168LACXX_4_gbs_ReadMapping.txt
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Done processing cultivar Buteo, flowcell_lane C168LACXX_4_gbs.  Moving on to next keyfile Entry.
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Setting up MinimapRun for: cultivar CDC_Rama, flowcell_lane C168LACXX_4_gbs.
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Running Minimap2 Command:
+minimap2 -ax sr -t 110 --secondary=yes -N20 --eqx /tempFileDir/outputDir//pangenome/wheat1ABD_pangenome_fasta.mmi /tempFileDir/data/fastq/CDC_Rama.fq.gz
+[M::main::0.377*1.00] loaded/built the index for 14305 target sequence(s)
+[M::mm_mapopt_update::0.377*1.00] mid_occ = 1000
+[M::mm_idx_stat] kmer size: 21; skip: 11; is_hpc: 0; #seq: 14305
+[M::mm_idx_stat::0.442*1.00] distinct minimizers: 5802329 (72.71% are singletons); average occurrences: 1.419; average spacing: 6.120; total length: 50399943
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Time spent setting up run: Taxon:CDC_Rama : 2.130102431sec
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Running in Low memory mode.  Simply counting the number of reads which hit a given set of haplotype ids
+[M::worker_pipeline::4.536*5.63] mapped 549451 sequences
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Processed 1000000 alignments.
+[M::worker_pipeline::7.061*6.00] mapped 549451 sequences
+[M::worker_pipeline::9.176*4.70] mapped 549451 sequences
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Processed 2000000 alignments.
+[M::worker_pipeline::11.018*3.96] mapped 363089 sequences
+[M::main] Version: 2.17-r974-dirty
+[M::main] CMD: minimap2 -ax sr -t 110 --secondary=yes -N20 --eqx /tempFileDir/outputDir//pangenome/wheat1ABD_pangenome_fasta.mmi /tempFileDir/data/fastq/CDC_Rama.fq.gz
+[M::main] Real time: 11.063 sec; CPU: 43.639 sec; Peak RSS: 3.084 GB
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - TotalTiming For samReader.next:8.37285914199915
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Time spent processing SAM: Taxon:CDC_Rama : 9.335385503sec
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Done running minimap2 for: cultivar CDC_Rama, flowcell_lane C168LACXX_4_gbs
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Compressing ReadMappings into GZipped Json.
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Done Compressing ReadMappings.  Pushing it to the DB.
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putReadMappingData: creating genotypes data for taxon CDC_Rama
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putReadMappingData: genotypes insert: INSERT INTO genotypes (ploidy, is_reference, line_name, line_data,isPhasedAcrossGenes,isPhasedAcrossChromosomes) values (2,0,'CDC_Rama','genotype for creating the path',0,0);
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Debug Output Dir Specified:  Writing file:/tempFileDir/outputDir/CDC_Rama_C168LACXX_4_gbs_ReadMapping.txt
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.Minimap2Utils - Done processing cultivar CDC_Rama, flowcell_lane C168LACXX_4_gbs.  Moving on to next keyfile Entry.
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - Closing DB
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Finished net.maizegenetics.pangenome.hapCalling.FastqToMappingPlugin: time: Feb 28, 2020 16:21:8
+[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.hapCalling.FastqToMappingPlugin: time: Feb 28, 2020 16:21:8: progress: 100%
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - net.maizegenetics.pangenome.hapCalling.FastqToMappingPlugin  Citation: Bradbury PJ, Zhang Z, Kroon DE, Casstevens TM, Ramdoss Y, Buckler ES. (2007) TASSEL: Software for association mapping of complex traits in diverse samples. Bioinformatics 23:2633-2635.
+[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.api.HaplotypeGraphBuilderPlugin: time: Feb 28, 2020 16:21:8: progress: 100%
+
+real	0m29.503s
+user	2m17.855s
+sys	0m46.790s
++ /tassel-5-standalone/run_pipeline.pl -debug -Xmx60G -configParameters /tempFileDir/data/configSQLite.txt -HaplotypeGraphBuilderPlugin -configFile /tempFileDir/data/configSQLite.txt -methods CONSENSUS,refRegionGroup -includeVariantContexts false -includeSequences false -endPlugin -BestHaplotypePathPlugin -keyFile /tempFileDir/data/fastq/200228.key.KS.gbs.rand3_pathKeyFile.txt -outDir /tempFileDir/outputDir//hap_count_best_path -readMethod HAP_COUNT_METHOD -pathMethod PATH_METHOD2 -endPlugin
+/tassel-5-standalone/lib/ahocorasick-0.2.4.jar:/tassel-5-standalone/lib/biojava-alignment-4.0.0.jar:/tassel-5-standalone/lib/biojava-core-4.0.0.jar:/tassel-5-standalone/lib/biojava-phylo-4.0.0.jar:/tassel-5-standalone/lib/colt-1.2.0.jar:/tassel-5-standalone/lib/commons-codec-1.10.jar:/tassel-5-standalone/lib/commons-math3-3.4.1.jar:/tassel-5-standalone/lib/ejml-0.23.jar:/tassel-5-standalone/lib/fastutil-8.2.2.jar:/tassel-5-standalone/lib/forester-1.038.jar:/tassel-5-standalone/lib/gs-core-1.3.jar:/tassel-5-standalone/lib/gs-ui-1.3.jar:/tassel-5-standalone/lib/guava-22.0.jar:/tassel-5-standalone/lib/htsjdk-2.19.0.jar:/tassel-5-standalone/lib/itextpdf-5.1.0.jar:/tassel-5-standalone/lib/javax.json-1.0.4.jar:/tassel-5-standalone/lib/jcommon-1.0.23.jar:/tassel-5-standalone/lib/jfreechart-1.0.19.jar:/tassel-5-standalone/lib/jfreesvg-3.2.jar:/tassel-5-standalone/lib/jhdf5-14.12.5.jar:/tassel-5-standalone/lib/json-simple-1.1.1.jar:/tassel-5-standalone/lib/junit-4.10.jar:/tassel-5-standalone/lib/kotlin-stdlib-1.3.50.jar:/tassel-5-standalone/lib/kotlinx-coroutines-core-1.3.0.jar:/tassel-5-standalone/lib/log4j-1.2.13.jar:/tassel-5-standalone/lib/mail-1.4.jar:/tassel-5-standalone/lib/phg.jar:/tassel-5-standalone/lib/postgresql-9.4-1201.jdbc41.jar:/tassel-5-standalone/lib/scala-library-2.10.1.jar:/tassel-5-standalone/lib/slf4j-api-1.7.10.jar:/tassel-5-standalone/lib/slf4j-simple-1.7.10.jar:/tassel-5-standalone/lib/snappy-java-1.1.1.6.jar:/tassel-5-standalone/lib/sqlite-jdbc-3.8.5-pre1.jar:/tassel-5-standalone/lib/trove-3.0.3.jar:/tassel-5-standalone/sTASSEL.jar
+Memory Settings: -Xms512m -Xmx60G
+Tassel Pipeline Arguments: -debug -configParameters /tempFileDir/data/configSQLite.txt -HaplotypeGraphBuilderPlugin -configFile /tempFileDir/data/configSQLite.txt -methods CONSENSUS,refRegionGroup -includeVariantContexts false -includeSequences false -endPlugin -BestHaplotypePathPlugin -keyFile /tempFileDir/data/fastq/200228.key.KS.gbs.rand3_pathKeyFile.txt -outDir /tempFileDir/outputDir//hap_count_best_path -readMethod HAP_COUNT_METHOD -pathMethod PATH_METHOD2 -endPlugin
+[main] INFO net.maizegenetics.plugindef.ParameterCache - load: loading parameter cache with: /tempFileDir/data/configSQLite.txt
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: password value: sqlite
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: LoadHaplotypesFromGVCFPlugin.referenceFasta value: /tempFileDir/data/reference/wheat_chr1A1B1D.fa
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: LoadHaplotypesFromGVCFPlugin.haplotypeMethodDescription value: "groovy from gvcf"
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: numThreads value: 10
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: LoadHaplotypesFromGVCFPlugin.gvcfDir value: /tempFileDir/data/outputs/gvcfs/
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: Xmx value: 60G
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: extendedWindowSize value: 1000
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: minTransitionProb value: 0.001
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: referenceFasta value: /tempFileDir/data/reference/wheat_chr1A1B1D.fa
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: LoadHaplotypesFromGVCFPlugin.haplotypeMethodName value: HAPLOTYPES_METHOD
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: minReads value: 0
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: host value: localHost
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: DBtype value: sqlite
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: includeVariants value: true
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: probCorrect value: 0.99
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: BestHaplotypePathPlugin.minTaxa value: 1
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: DB value: /tempFileDir/outputDir/group3_wheat1A1B1D.db
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: configFile value: /tempFileDir/data/configSQLite.txt
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: maxReads value: 100
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: maxNodes value: 30
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: LoadHaplotypesFromGVCFPlugin.keyFile value: /tempFileDir/data/asub_gvcf_keyfile.txt
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: maxError value: 0.2
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: assemblyEntryPoint value: all
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: mxDiv value: .001
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: user value: sqlite
+[main] INFO net.maizegenetics.tassel.TasselLogging - Tassel Version: 5.2.60  Date: February 20, 2020
+[main] INFO net.maizegenetics.tassel.TasselLogging - Max Available Memory Reported by JVM: 54613 MB
+[main] INFO net.maizegenetics.tassel.TasselLogging - Java Version: 1.8.0_191
+[main] INFO net.maizegenetics.tassel.TasselLogging - OS: Linux
+[main] INFO net.maizegenetics.tassel.TasselLogging - Number of Processors: 112
+[main] INFO net.maizegenetics.pipeline.TasselPipeline - Tassel Pipeline Arguments: [-fork1, -HaplotypeGraphBuilderPlugin, -configFile, /tempFileDir/data/configSQLite.txt, -methods, CONSENSUS,refRegionGroup, -includeVariantContexts, false, -includeSequences, false, -endPlugin, -BestHaplotypePathPlugin, -keyFile, /tempFileDir/data/fastq/200228.key.KS.gbs.rand3_pathKeyFile.txt, -outDir, /tempFileDir/outputDir//hap_count_best_path, -readMethod, HAP_COUNT_METHOD, -pathMethod, PATH_METHOD2, -endPlugin, -runfork1]
+net.maizegenetics.pangenome.api.HaplotypeGraphBuilderPlugin
+   net.maizegenetics.pangenome.hapCalling.BestHaplotypePathPlugin
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.pangenome.api.HaplotypeGraphBuilderPlugin: time: Feb 28, 2020 16:21:9
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - 
+HaplotypeGraphBuilderPlugin Parameters
+configFile: /tempFileDir/data/configSQLite.txt
+methods: CONSENSUS,refRegionGroup
+includeSequences: false
+includeVariantContexts: false
+haplotypeIds: null
+chromosomes: null
+
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.DBLoadingUtils - first connection: dbName from config file = /tempFileDir/outputDir/group3_wheat1A1B1D.db host: localHost user: sqlite type: sqlite
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.DBLoadingUtils - Database URL: jdbc:sqlite:/tempFileDir/outputDir/group3_wheat1A1B1D.db
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.DBLoadingUtils - Connected to database:  
+
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - referenceRangesAsMap: query statement: select reference_ranges.ref_range_id, chrom, range_start, range_end, methods.name from reference_ranges  INNER JOIN ref_range_ref_range_method on ref_range_ref_range_method.ref_range_id=reference_ranges.ref_range_id  INNER JOIN methods on ref_range_ref_range_method.method_id = methods.method_id  AND methods.method_type = 7 ORDER BY reference_ranges.ref_range_id
+methods size: 1
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - referenceRangesAsMap: number of reference ranges: 26508
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - referenceRangesAsMap: time: 0.204281148 secs.
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - taxaListMap: query statement: SELECT gamete_haplotypes.gamete_grp_id, genotypes.line_name FROM gamete_haplotypes INNER JOIN gametes ON gamete_haplotypes.gameteid = gametes.gameteid INNER JOIN genotypes on gametes.genoid = genotypes.genoid ORDER BY gamete_haplotypes.gamete_grp_id;
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - taxaListMap: number of taxa lists: 8
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - taxaListMap: time: 0.004671166 secs.
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createHaplotypeNodes: haplotype method: CONSENSUS range group method: refRegionGroup
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createHaplotypeNodes: query statement: SELECT haplotypes_id, gamete_grp_id, haplotypes.ref_range_id, seq_hash, seq_len FROM haplotypes WHERE method_id = 5;
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - addNodes: number of nodes: 14305
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - addNodes: number of reference ranges: 13253
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createHaplotypeNodes: time: 0.216413955 secs.
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.HaplotypeGraph - Created graph edges: created when requested  number of nodes: 14305  number of reference ranges: 13253
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Finished net.maizegenetics.pangenome.api.HaplotypeGraphBuilderPlugin: time: Feb 28, 2020 16:21:10
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.pangenome.hapCalling.BestHaplotypePathPlugin: time: Feb 28, 2020 16:21:10
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - 
+BestHaplotypePathPlugin Parameters
+keyFile: /tempFileDir/data/fastq/200228.key.KS.gbs.rand3_pathKeyFile.txt
+readFile: null
+readDir: null
+outDir: /tempFileDir/outputDir//hap_count_best_path
+readMethod: HAP_COUNT_METHOD
+pathMethod: PATH_METHOD2
+overwrite: false
+minTaxa: 1
+minReads: 0
+maxReads: 100
+maxNodes: 30
+minTransitionProb: 0.001
+probCorrect: 0.99
+splitNodes: true
+splitProb: 0.99
+usebf: false
+minP: 0.8
+bfInfoFile: null
+removeEqual: true
+numThreads: 10
+
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.DBLoadingUtils - first connection: dbName from config file = /tempFileDir/outputDir/group3_wheat1A1B1D.db host: localHost user: sqlite type: sqlite
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.DBLoadingUtils - Database URL: jdbc:sqlite:/tempFileDir/outputDir/group3_wheat1A1B1D.db
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.DBLoadingUtils - Connected to database:  
+
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess - db is setup, init prepared statements, load hash table
+
+ beginning - isSqlite is true
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all geneotypes in genotype table=7
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - refRangeRefRangeIDMap is null, creating new one with size : 26508
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadAnchorHash: at end, size of refRangeRefRangeIDMap: 26508, number of rs.next processed: 26508
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all methods in method table=6
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all groups in gamete_groups table=8
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all gametes in gametes table=4
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading readMappingHash, size of all read_mappings in read_mapping table=3
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.BestHaplotypePathPlugin - Adding entries to the inputChannel:
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.BestHaplotypePathPlugin - Adding: AC_Avonlea
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.BestHaplotypePathPlugin - Adding: Buteo
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.BestHaplotypePathPlugin - Adding: CDC_Rama
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.BestHaplotypePathPlugin - Done Adding KeyFile entries to the inputChannel:
+[DefaultDispatcher-worker-7] DEBUG net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - before filtering hapgraph: 14305 nodes.
+
+[DefaultDispatcher-worker-3] DEBUG net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - before filtering hapgraph: 14305 nodes.
+
+[DefaultDispatcher-worker-1] DEBUG net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - before filtering hapgraph: 14305 nodes.
+
+[DefaultDispatcher-worker-3] DEBUG net.maizegenetics.pangenome.api.FilterGraphPlugin - Filter graph on minCountTaxa.
+[DefaultDispatcher-worker-7] DEBUG net.maizegenetics.pangenome.api.FilterGraphPlugin - Filter graph on minCountTaxa.
+[DefaultDispatcher-worker-1] DEBUG net.maizegenetics.pangenome.api.FilterGraphPlugin - Filter graph on minCountTaxa.
+[DefaultDispatcher-worker-7] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createEdges: creating edges from nodes.
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createEdges: creating edges from nodes.
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createEdges: creating edges from nodes.
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createEdges: time: 0.209984441 secs.
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createEdges: time: 0.210105112 secs.
+[DefaultDispatcher-worker-7] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createEdges: time: 0.211360484 secs.
+[DefaultDispatcher-worker-7] INFO net.maizegenetics.pangenome.api.HaplotypeGraph - Created graph number of edges: 15154  number of nodes: 14305  number of reference ranges: 13253
+[DefaultDispatcher-worker-7] DEBUG net.maizegenetics.pangenome.api.FilterGraphPlugin - Filter graph on refRanges.
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.api.HaplotypeGraph - Created graph number of edges: 15154  number of nodes: 14305  number of reference ranges: 13253
+[DefaultDispatcher-worker-1] DEBUG net.maizegenetics.pangenome.api.FilterGraphPlugin - Filter graph on refRanges.
+[DefaultDispatcher-worker-7] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createEdges: creating edges from nodes.
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.api.HaplotypeGraph - Created graph number of edges: 15154  number of nodes: 14305  number of reference ranges: 13253
+[DefaultDispatcher-worker-3] DEBUG net.maizegenetics.pangenome.api.FilterGraphPlugin - Filter graph on refRanges.
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createEdges: creating edges from nodes.
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createEdges: creating edges from nodes.
+[DefaultDispatcher-worker-7] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createEdges: time: 0.160878029 secs.
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createEdges: time: 0.200428031 secs.
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createEdges: time: 0.200638488 secs.
+[DefaultDispatcher-worker-7] INFO net.maizegenetics.pangenome.api.HaplotypeGraph - Created graph number of edges: 15147  number of nodes: 14298  number of reference ranges: 13246
+[DefaultDispatcher-worker-7] DEBUG net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - after filtering hapgraph: 14298 nodes.
+
+[DefaultDispatcher-worker-7] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createEdges: creating edges from nodes.
+[DefaultDispatcher-worker-7] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createEdges: time: 0.051638052 secs.
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.api.HaplotypeGraph - Created graph number of edges: 15145  number of nodes: 14296  number of reference ranges: 13244
+[DefaultDispatcher-worker-1] DEBUG net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - after filtering hapgraph: 14296 nodes.
+
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.api.HaplotypeGraph - Created graph number of edges: 15146  number of nodes: 14297  number of reference ranges: 13245
+[DefaultDispatcher-worker-3] DEBUG net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - after filtering hapgraph: 14297 nodes.
+
+[DefaultDispatcher-worker-7] INFO net.maizegenetics.pangenome.api.HaplotypeGraph - Created graph number of edges: 15147  number of nodes: 14298  number of reference ranges: 13246
+starting split nodes by taxa
+[DefaultDispatcher-worker-7] DEBUG net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - starting split nodes by taxa
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createEdges: creating edges from nodes.
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createEdges: creating edges from nodes.
+[DefaultDispatcher-worker-7] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createEdgesFullyConnected: creating edges from nodes.
+[DefaultDispatcher-worker-7] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createEdgesFullyConnected: time: 0.039668137 secs.
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createEdges: time: 0.104885136 secs.
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createEdges: time: 0.109944729 secs.
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.api.HaplotypeGraph - Created graph number of edges: 15145  number of nodes: 14296  number of reference ranges: 13244
+starting split nodes by taxa
+[DefaultDispatcher-worker-1] DEBUG net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - starting split nodes by taxa
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.api.HaplotypeGraph - Created graph number of edges: 15146  number of nodes: 14297  number of reference ranges: 13245
+starting split nodes by taxa
+[DefaultDispatcher-worker-3] DEBUG net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - starting split nodes by taxa
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createEdgesFullyConnected: creating edges from nodes.
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createEdgesFullyConnected: creating edges from nodes.
+[DefaultDispatcher-worker-7] INFO net.maizegenetics.pangenome.api.HaplotypeGraph - Created graph number of edges: 119187  number of nodes: 39738  number of reference ranges: 13246
+[DefaultDispatcher-worker-7] DEBUG net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - split by taxa took 248 ms.
+[DefaultDispatcher-worker-7] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - Getting path for chromosome 1A
+[DefaultDispatcher-worker-7] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - Extracted graph tree for chromosome 1A
+[DefaultDispatcher-worker-7] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - emission probability set up in 9 ms.
+[DefaultDispatcher-worker-7] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - net.maizegenetics.pangenome.api.HaplotypeEmissionProbability@d7922
+[DefaultDispatcher-worker-7] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - transition probability set up in 0 ms.
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createEdgesFullyConnected: time: 0.100434317 secs.
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createEdgesFullyConnected: time: 0.084564606 secs.
+[DefaultDispatcher-worker-7] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - Viterbi algorithm calculated in 222 ms.
+[DefaultDispatcher-worker-7] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - Getting path for chromosome 1B
+[DefaultDispatcher-worker-7] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - Extracted graph tree for chromosome 1B
+[DefaultDispatcher-worker-7] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - emission probability set up in 0 ms.
+[DefaultDispatcher-worker-7] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - net.maizegenetics.pangenome.api.HaplotypeEmissionProbability@11a94a7c
+[DefaultDispatcher-worker-7] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - transition probability set up in 0 ms.
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.api.HaplotypeGraph - Created graph number of edges: 119178  number of nodes: 39735  number of reference ranges: 13245
+[DefaultDispatcher-worker-3] DEBUG net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - split by taxa took 316 ms.
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - Getting path for chromosome 1A
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - Extracted graph tree for chromosome 1A
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - emission probability set up in 0 ms.
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - net.maizegenetics.pangenome.api.HaplotypeEmissionProbability@166c4aff
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - transition probability set up in 0 ms.
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.api.HaplotypeGraph - Created graph number of edges: 119169  number of nodes: 39732  number of reference ranges: 13244
+[DefaultDispatcher-worker-1] DEBUG net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - split by taxa took 348 ms.
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - Getting path for chromosome 1A
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - Extracted graph tree for chromosome 1A
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - emission probability set up in 0 ms.
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - net.maizegenetics.pangenome.api.HaplotypeEmissionProbability@730a5f1d
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - transition probability set up in 0 ms.
+[DefaultDispatcher-worker-7] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - Viterbi algorithm calculated in 134 ms.
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - Viterbi algorithm calculated in 113 ms.
+[DefaultDispatcher-worker-7] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - Getting path for chromosome 1D
+[DefaultDispatcher-worker-7] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - Extracted graph tree for chromosome 1D
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - Getting path for chromosome 1B
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - Extracted graph tree for chromosome 1B
+[DefaultDispatcher-worker-7] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - emission probability set up in 0 ms.
+[DefaultDispatcher-worker-7] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - net.maizegenetics.pangenome.api.HaplotypeEmissionProbability@4912abc1
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - emission probability set up in 0 ms.
+[DefaultDispatcher-worker-7] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - transition probability set up in 1 ms.
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - net.maizegenetics.pangenome.api.HaplotypeEmissionProbability@5b6a5adc
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - transition probability set up in 0 ms.
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - Viterbi algorithm calculated in 123 ms.
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - Getting path for chromosome 1B
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - Extracted graph tree for chromosome 1B
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - emission probability set up in 0 ms.
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - net.maizegenetics.pangenome.api.HaplotypeEmissionProbability@31f5e5f2
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - transition probability set up in 0 ms.
+[DefaultDispatcher-worker-7] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - Viterbi algorithm calculated in 119 ms.
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - Viterbi algorithm calculated in 118 ms.
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - Getting path for chromosome 1D
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - Extracted graph tree for chromosome 1D
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - emission probability set up in 0 ms.
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - net.maizegenetics.pangenome.api.HaplotypeEmissionProbability@3af2d5fc
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - transition probability set up in 0 ms.
+[DefaultDispatcher-worker-7] DEBUG net.maizegenetics.pangenome.db_loading.DBLoadingUtils - encodePathARrayFromSet: Extracting the haplotypeIds
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - Viterbi algorithm calculated in 146 ms.
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - Getting path for chromosome 1D
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - Extracted graph tree for chromosome 1D
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - emission probability set up in 0 ms.
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - net.maizegenetics.pangenome.api.HaplotypeEmissionProbability@80c5de1
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - transition probability set up in 0 ms.
+[DefaultDispatcher-worker-7] DEBUG net.maizegenetics.pangenome.db_loading.DBLoadingUtils - encodePathArrayFromSet: created the compressed path data
+[DefaultDispatcher-worker-7] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putMethod: added method PATH_METHOD2 to methods table
+[DefaultDispatcher-worker-7] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all methods in method table=7
+[DefaultDispatcher-worker-7] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putPathsData - total count loaded to read_mapping_paths table: 1
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - Viterbi algorithm calculated in 63 ms.
+[DefaultDispatcher-worker-1] DEBUG net.maizegenetics.pangenome.db_loading.DBLoadingUtils - encodePathARrayFromSet: Extracting the haplotypeIds
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.hapCalling.ConvertReadsToPathUsingHMM - Viterbi algorithm calculated in 141 ms.
+[DefaultDispatcher-worker-1] DEBUG net.maizegenetics.pangenome.db_loading.DBLoadingUtils - encodePathArrayFromSet: created the compressed path data
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putPathsData - total count loaded to read_mapping_paths table: 1
+[DefaultDispatcher-worker-1] DEBUG net.maizegenetics.pangenome.db_loading.DBLoadingUtils - encodePathARrayFromSet: Extracting the haplotypeIds
+[DefaultDispatcher-worker-1] DEBUG net.maizegenetics.pangenome.db_loading.DBLoadingUtils - encodePathArrayFromSet: created the compressed path data
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putPathsData - total count loaded to read_mapping_paths table: 1
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.BestHaplotypePathPlugin - Finished writing to the DB.
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - Closing DB
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Finished net.maizegenetics.pangenome.hapCalling.BestHaplotypePathPlugin: time: Feb 28, 2020 16:21:12
+[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.hapCalling.BestHaplotypePathPlugin: time: Feb 28, 2020 16:21:12: progress: 100%
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - net.maizegenetics.pangenome.hapCalling.BestHaplotypePathPlugin  Citation: Bradbury PJ, Zhang Z, Kroon DE, Casstevens TM, Ramdoss Y, Buckler ES. (2007) TASSEL: Software for association mapping of complex traits in diverse samples. Bioinformatics 23:2633-2635.
+[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.api.HaplotypeGraphBuilderPlugin: time: Feb 28, 2020 16:21:12: progress: 100%
+
+real	0m4.101s
+user	0m17.728s
+sys	0m1.638s
