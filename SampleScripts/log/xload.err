@@ -1,3 +1,6 @@
+[33mWARNING: Non existent mountpoint (directory) in container: '/var/singularity/mnt/final/homes'
+[0m[33mWARNING: Could not chdir to home: /homes/lianggao
+[0m/bin/bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
 + OUTPUT_PATH=/tempFileDir/outputDir
 + DATA_PATH=/tempFileDir/data
 + REFERENCE_PATH=/tempFileDir/data/reference
@@ -7,12 +10,28 @@
 + dbAnchors=intervals.bed
 + genomeDataFile=ref_load_data.txt
 + create_new=true
-++ cut -d= -f2
 ++ grep '^Xmx=' /tempFileDir/data/config.txt
+++ cut -d= -f2
 + memoryString=60G
 + '[' 60G '!=' '' ']'
 + fullXmx=-Xmx60G
 + /tassel-5-standalone/run_pipeline.pl -Xmx60G -debug -GetDBConnectionPlugin -config /tempFileDir/data/config.txt -create true -endPlugin -LoadGenomeIntervalsToPHGdbPlugin -ref /tempFileDir/data/reference/reference.fa -anchors /tempFileDir/answer/intervals.bed -genomeData /tempFileDir/data/ref_load_data.txt -outputDir /tempFileDir/outputDir -endPlugin
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "en_US.UTF-8",
+	LC_CTYPE = "en_US.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
 + cd /liquibase
 + lbCommand=changeLogSync
 + /tassel-5-standalone/run_pipeline.pl -Xmx60G -debug -configParameters /tempFileDir/data/config.txt -LiquibaseUpdatePlugin -outputDir /tempFileDir/outputDir -command changeLogSync -endPlugin
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "en_US.UTF-8",
+	LC_CTYPE = "en_US.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").

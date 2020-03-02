@@ -1,21 +1,24 @@
-/tassel-5-standalone/lib/ahocorasick-0.2.4.jar:/tassel-5-standalone/lib/biojava-alignment-4.0.0.jar:/tassel-5-standalone/lib/biojava-core-4.0.0.jar:/tassel-5-standalone/lib/biojava-phylo-4.0.0.jar:/tassel-5-standalone/lib/colt-1.2.0.jar:/tassel-5-standalone/lib/commons-codec-1.10.jar:/tassel-5-standalone/lib/commons-math3-3.4.1.jar:/tassel-5-standalone/lib/ejml-0.23.jar:/tassel-5-standalone/lib/fastutil-8.2.2.jar:/tassel-5-standalone/lib/forester-1.038.jar:/tassel-5-standalone/lib/gs-core-1.3.jar:/tassel-5-standalone/lib/gs-ui-1.3.jar:/tassel-5-standalone/lib/guava-22.0.jar:/tassel-5-standalone/lib/htsjdk-2.19.0.jar:/tassel-5-standalone/lib/itextpdf-5.1.0.jar:/tassel-5-standalone/lib/javax.json-1.0.4.jar:/tassel-5-standalone/lib/jcommon-1.0.23.jar:/tassel-5-standalone/lib/jfreechart-1.0.19.jar:/tassel-5-standalone/lib/jfreesvg-3.2.jar:/tassel-5-standalone/lib/jhdf5-14.12.5.jar:/tassel-5-standalone/lib/json-simple-1.1.1.jar:/tassel-5-standalone/lib/junit-4.10.jar:/tassel-5-standalone/lib/kotlin-stdlib-1.3.50.jar:/tassel-5-standalone/lib/kotlinx-coroutines-core-1.3.0.jar:/tassel-5-standalone/lib/log4j-1.2.13.jar:/tassel-5-standalone/lib/mail-1.4.jar:/tassel-5-standalone/lib/phg.jar:/tassel-5-standalone/lib/postgresql-9.4-1201.jdbc41.jar:/tassel-5-standalone/lib/scala-library-2.10.1.jar:/tassel-5-standalone/lib/slf4j-api-1.7.10.jar:/tassel-5-standalone/lib/slf4j-simple-1.7.10.jar:/tassel-5-standalone/lib/snappy-java-1.1.1.6.jar:/tassel-5-standalone/lib/sqlite-jdbc-3.8.5-pre1.jar:/tassel-5-standalone/lib/trove-3.0.3.jar:/tassel-5-standalone/sTASSEL.jar
+/tassel-5-standalone/lib/jfreesvg-3.2.jar:/tassel-5-standalone/lib/ejml-0.23.jar:/tassel-5-standalone/lib/gs-core-1.3.jar:/tassel-5-standalone/lib/biojava-alignment-4.0.0.jar:/tassel-5-standalone/lib/commons-codec-1.10.jar:/tassel-5-standalone/lib/javax.json-1.0.4.jar:/tassel-5-standalone/lib/kotlinx-coroutines-core-1.3.0.jar:/tassel-5-standalone/lib/fastutil-8.2.2.jar:/tassel-5-standalone/lib/mail-1.4.jar:/tassel-5-standalone/lib/junit-4.10.jar:/tassel-5-standalone/lib/gs-ui-1.3.jar:/tassel-5-standalone/lib/guava-22.0.jar:/tassel-5-standalone/lib/biojava-core-4.0.0.jar:/tassel-5-standalone/lib/biojava-phylo-4.0.0.jar:/tassel-5-standalone/lib/htsjdk-2.19.0.jar:/tassel-5-standalone/lib/sqlite-jdbc-3.8.5-pre1.jar:/tassel-5-standalone/lib/itextpdf-5.1.0.jar:/tassel-5-standalone/lib/phg.jar:/tassel-5-standalone/lib/scala-library-2.10.1.jar:/tassel-5-standalone/lib/jcommon-1.0.23.jar:/tassel-5-standalone/lib/kotlin-stdlib-1.3.50.jar:/tassel-5-standalone/lib/jfreechart-1.0.19.jar:/tassel-5-standalone/lib/json-simple-1.1.1.jar:/tassel-5-standalone/lib/jhdf5-14.12.5.jar:/tassel-5-standalone/lib/slf4j-simple-1.7.10.jar:/tassel-5-standalone/lib/colt-1.2.0.jar:/tassel-5-standalone/lib/log4j-1.2.13.jar:/tassel-5-standalone/lib/forester-1.038.jar:/tassel-5-standalone/lib/commons-math3-3.4.1.jar:/tassel-5-standalone/lib/slf4j-api-1.7.10.jar:/tassel-5-standalone/lib/postgresql-9.4-1201.jdbc41.jar:/tassel-5-standalone/lib/ahocorasick-0.2.4.jar:/tassel-5-standalone/lib/snappy-java-1.1.1.6.jar:/tassel-5-standalone/lib/trove-3.0.3.jar:/tassel-5-standalone/sTASSEL.jar
 Memory Settings: -Xms512m -Xmx60G
 Tassel Pipeline Arguments: -debug -GetDBConnectionPlugin -config /tempFileDir/data/config.txt -create true -endPlugin -LoadGenomeIntervalsToPHGdbPlugin -ref /tempFileDir/data/reference/reference.fa -anchors /tempFileDir/answer/intervals.bed -genomeData /tempFileDir/data/ref_load_data.txt -outputDir /tempFileDir/outputDir -endPlugin
 [main] INFO net.maizegenetics.tassel.TasselLogging - Tassel Version: 5.2.60  Date: February 20, 2020
 [main] INFO net.maizegenetics.tassel.TasselLogging - Max Available Memory Reported by JVM: 54613 MB
 [main] INFO net.maizegenetics.tassel.TasselLogging - Java Version: 1.8.0_191
 [main] INFO net.maizegenetics.tassel.TasselLogging - OS: Linux
-[main] INFO net.maizegenetics.tassel.TasselLogging - Number of Processors: 112
+[main] INFO net.maizegenetics.tassel.TasselLogging - Number of Processors: 16
 [main] INFO net.maizegenetics.pipeline.TasselPipeline - Tassel Pipeline Arguments: [-fork1, -GetDBConnectionPlugin, -config, /tempFileDir/data/config.txt, -create, true, -endPlugin, -LoadGenomeIntervalsToPHGdbPlugin, -ref, /tempFileDir/data/reference/reference.fa, -anchors, /tempFileDir/answer/intervals.bed, -genomeData, /tempFileDir/data/ref_load_data.txt, -outputDir, /tempFileDir/outputDir, -endPlugin, -runfork1]
 net.maizegenetics.pangenome.db_loading.GetDBConnectionPlugin
    net.maizegenetics.pangenome.db_loading.LoadGenomeIntervalsToPHGdbPlugin
-[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.pangenome.db_loading.GetDBConnectionPlugin: time: Feb 28, 2020 22:34:27
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.pangenome.db_loading.GetDBConnectionPlugin: time: Mar 2, 2020 22:28:46
 [pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - 
 GetDBConnectionPlugin Parameters
 config: /tempFileDir/data/config.txt
 create: true
 
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.DBLoadingUtils - first connection: dbName from config file = /tempFileDir/outputDir/group3_wheat1A1B1D.db host: localHost user: sqlite type: sqlite
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.DBLoadingUtils - 
+deleting old db
+
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.DBLoadingUtils - Database URL: jdbc:sqlite:/tempFileDir/outputDir/group3_wheat1A1B1D.db
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.DBLoadingUtils - Database does not exist, creating new with schema: -- Table: reference_ranges 
 -- This data pertains to the reference
@@ -218,8 +221,8 @@ CREATE TABLE paths (
 );
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.DBLoadingUtils - Connected to database:  
 
-[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Finished net.maizegenetics.pangenome.db_loading.GetDBConnectionPlugin: time: Feb 28, 2020 22:34:27
-[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.pangenome.db_loading.LoadGenomeIntervalsToPHGdbPlugin: time: Feb 28, 2020 22:34:27
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Finished net.maizegenetics.pangenome.db_loading.GetDBConnectionPlugin: time: Mar 2, 2020 22:28:47
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.pangenome.db_loading.LoadGenomeIntervalsToPHGdbPlugin: time: Mar 2, 2020 22:28:47
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.LoadGenomeIntervalsToPHGdbPlugin - postProcessParameters: reading genomeDataFile: /tempFileDir/data/ref_load_data.txt
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.LoadGenomeIntervalsToPHGdbPlugin - GenomeFile header line: Genotype	Hapnumber	Dataline	ploidy	genesPhased	chromsPhased	confidence	Method	MethodDetails
 [pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - 
@@ -294,29 +297,29 @@ Anchor array created, load into DB ... size of anchorMap: 13255
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypes: starting to commit haplotypes
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - haplotypeInsertPS.executeBatch() 10001
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaployptes - total count loaded to haplotypes table: 13255
-[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.LoadGenomeIntervalsToPHGdbPlugin - Time to load create and load inter-anchors: 258.475267383 seconds
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.LoadGenomeIntervalsToPHGdbPlugin - Time to load create and load inter-anchors: 328.717193399 seconds
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putAlleleData: total loaded to alleles table: 3905
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:loadAlleleHash: added string NONE to alleles table
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - Closing DB
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.LoadGenomeIntervalsToPHGdbPlugin - 
-Finished, TotalTime for LoadGenomeIntervalsToPHGdbPlugin was 298.702176361 seconds
-[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Finished net.maizegenetics.pangenome.db_loading.LoadGenomeIntervalsToPHGdbPlugin: time: Feb 28, 2020 22:39:26
-[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.db_loading.LoadGenomeIntervalsToPHGdbPlugin: time: Feb 28, 2020 22:39:26: progress: 100%
+Finished, TotalTime for LoadGenomeIntervalsToPHGdbPlugin was 395.43678455 seconds
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Finished net.maizegenetics.pangenome.db_loading.LoadGenomeIntervalsToPHGdbPlugin: time: Mar 2, 2020 22:35:23
+[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.db_loading.LoadGenomeIntervalsToPHGdbPlugin: time: Mar 2, 2020 22:35:23: progress: 100%
 [pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - net.maizegenetics.pangenome.db_loading.LoadGenomeIntervalsToPHGdbPlugin  Citation: Bradbury PJ, Zhang Z, Kroon DE, Casstevens TM, Ramdoss Y, Buckler ES. (2007) TASSEL: Software for association mapping of complex traits in diverse samples. Bioinformatics 23:2633-2635.
-[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.db_loading.GetDBConnectionPlugin: time: Feb 28, 2020 22:39:26: progress: 100%
-/tassel-5-standalone/lib/ahocorasick-0.2.4.jar:/tassel-5-standalone/lib/biojava-alignment-4.0.0.jar:/tassel-5-standalone/lib/biojava-core-4.0.0.jar:/tassel-5-standalone/lib/biojava-phylo-4.0.0.jar:/tassel-5-standalone/lib/colt-1.2.0.jar:/tassel-5-standalone/lib/commons-codec-1.10.jar:/tassel-5-standalone/lib/commons-math3-3.4.1.jar:/tassel-5-standalone/lib/ejml-0.23.jar:/tassel-5-standalone/lib/fastutil-8.2.2.jar:/tassel-5-standalone/lib/forester-1.038.jar:/tassel-5-standalone/lib/gs-core-1.3.jar:/tassel-5-standalone/lib/gs-ui-1.3.jar:/tassel-5-standalone/lib/guava-22.0.jar:/tassel-5-standalone/lib/htsjdk-2.19.0.jar:/tassel-5-standalone/lib/itextpdf-5.1.0.jar:/tassel-5-standalone/lib/javax.json-1.0.4.jar:/tassel-5-standalone/lib/jcommon-1.0.23.jar:/tassel-5-standalone/lib/jfreechart-1.0.19.jar:/tassel-5-standalone/lib/jfreesvg-3.2.jar:/tassel-5-standalone/lib/jhdf5-14.12.5.jar:/tassel-5-standalone/lib/json-simple-1.1.1.jar:/tassel-5-standalone/lib/junit-4.10.jar:/tassel-5-standalone/lib/kotlin-stdlib-1.3.50.jar:/tassel-5-standalone/lib/kotlinx-coroutines-core-1.3.0.jar:/tassel-5-standalone/lib/log4j-1.2.13.jar:/tassel-5-standalone/lib/mail-1.4.jar:/tassel-5-standalone/lib/phg.jar:/tassel-5-standalone/lib/postgresql-9.4-1201.jdbc41.jar:/tassel-5-standalone/lib/scala-library-2.10.1.jar:/tassel-5-standalone/lib/slf4j-api-1.7.10.jar:/tassel-5-standalone/lib/slf4j-simple-1.7.10.jar:/tassel-5-standalone/lib/snappy-java-1.1.1.6.jar:/tassel-5-standalone/lib/sqlite-jdbc-3.8.5-pre1.jar:/tassel-5-standalone/lib/trove-3.0.3.jar:/tassel-5-standalone/sTASSEL.jar
+[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.db_loading.GetDBConnectionPlugin: time: Mar 2, 2020 22:35:23: progress: 100%
+/tassel-5-standalone/lib/jfreesvg-3.2.jar:/tassel-5-standalone/lib/ejml-0.23.jar:/tassel-5-standalone/lib/gs-core-1.3.jar:/tassel-5-standalone/lib/biojava-alignment-4.0.0.jar:/tassel-5-standalone/lib/commons-codec-1.10.jar:/tassel-5-standalone/lib/javax.json-1.0.4.jar:/tassel-5-standalone/lib/kotlinx-coroutines-core-1.3.0.jar:/tassel-5-standalone/lib/fastutil-8.2.2.jar:/tassel-5-standalone/lib/mail-1.4.jar:/tassel-5-standalone/lib/junit-4.10.jar:/tassel-5-standalone/lib/gs-ui-1.3.jar:/tassel-5-standalone/lib/guava-22.0.jar:/tassel-5-standalone/lib/biojava-core-4.0.0.jar:/tassel-5-standalone/lib/biojava-phylo-4.0.0.jar:/tassel-5-standalone/lib/htsjdk-2.19.0.jar:/tassel-5-standalone/lib/sqlite-jdbc-3.8.5-pre1.jar:/tassel-5-standalone/lib/itextpdf-5.1.0.jar:/tassel-5-standalone/lib/phg.jar:/tassel-5-standalone/lib/scala-library-2.10.1.jar:/tassel-5-standalone/lib/jcommon-1.0.23.jar:/tassel-5-standalone/lib/kotlin-stdlib-1.3.50.jar:/tassel-5-standalone/lib/jfreechart-1.0.19.jar:/tassel-5-standalone/lib/json-simple-1.1.1.jar:/tassel-5-standalone/lib/jhdf5-14.12.5.jar:/tassel-5-standalone/lib/slf4j-simple-1.7.10.jar:/tassel-5-standalone/lib/colt-1.2.0.jar:/tassel-5-standalone/lib/log4j-1.2.13.jar:/tassel-5-standalone/lib/forester-1.038.jar:/tassel-5-standalone/lib/commons-math3-3.4.1.jar:/tassel-5-standalone/lib/slf4j-api-1.7.10.jar:/tassel-5-standalone/lib/postgresql-9.4-1201.jdbc41.jar:/tassel-5-standalone/lib/ahocorasick-0.2.4.jar:/tassel-5-standalone/lib/snappy-java-1.1.1.6.jar:/tassel-5-standalone/lib/trove-3.0.3.jar:/tassel-5-standalone/sTASSEL.jar
 Memory Settings: -Xms512m -Xmx60G
 Tassel Pipeline Arguments: -debug -configParameters /tempFileDir/data/config.txt -LiquibaseUpdatePlugin -outputDir /tempFileDir/outputDir -command changeLogSync -endPlugin
 [main] INFO net.maizegenetics.plugindef.ParameterCache - load: loading parameter cache with: /tempFileDir/data/config.txt
 [main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: password value: sqlite
-[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: LoadHaplotypesFromGVCFPlugin.referenceFasta value: /tempFileDir/data/reference/wheat_chr1A1B1D.fa
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: LoadHaplotypesFromGVCFPlugin.referenceFasta value: /tempFileDir/data/reference/reference.fa
 [main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: LoadHaplotypesFromGVCFPlugin.haplotypeMethodDescription value: "groovy from gvcf"
 [main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: numThreads value: 10
-[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: LoadHaplotypesFromGVCFPlugin.gvcfDir value: /tempFileDir/data/outputs/gvcfs/
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: LoadHaplotypesFromGVCFPlugin.gvcfDir value: /tempFileDir/data/gvcfs/
 [main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: Xmx value: 60G
 [main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: extendedWindowSize value: 1000
 [main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: minTransitionProb value: 0.001
-[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: referenceFasta value: /tempFileDir/data/reference/wheat_chr1A1B1D.fa
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: referenceFasta value: /tempFileDir/data/reference/reference.fa
 [main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: LoadHaplotypesFromGVCFPlugin.haplotypeMethodName value: HAPLOTYPES_METHOD
 [main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: minReads value: 0
 [main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: host value: localHost
@@ -328,7 +331,7 @@ Tassel Pipeline Arguments: -debug -configParameters /tempFileDir/data/config.txt
 [main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: configFile value: /tempFileDir/data/config.txt
 [main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: maxReads value: 100
 [main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: maxNodes value: 30
-[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: LoadHaplotypesFromGVCFPlugin.keyFile value: /tempFileDir/data/asub_gvcf_keyfile.txt
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: LoadHaplotypesFromGVCFPlugin.keyFile value: /tempFileDir/data/keyfile.txt
 [main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: maxError value: 0.2
 [main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: assemblyEntryPoint value: all
 [main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: mxDiv value: .001
@@ -337,16 +340,16 @@ Tassel Pipeline Arguments: -debug -configParameters /tempFileDir/data/config.txt
 [main] INFO net.maizegenetics.tassel.TasselLogging - Max Available Memory Reported by JVM: 54613 MB
 [main] INFO net.maizegenetics.tassel.TasselLogging - Java Version: 1.8.0_191
 [main] INFO net.maizegenetics.tassel.TasselLogging - OS: Linux
-[main] INFO net.maizegenetics.tassel.TasselLogging - Number of Processors: 112
+[main] INFO net.maizegenetics.tassel.TasselLogging - Number of Processors: 16
 [main] INFO net.maizegenetics.pipeline.TasselPipeline - Tassel Pipeline Arguments: [-fork1, -LiquibaseUpdatePlugin, -outputDir, /tempFileDir/outputDir, -command, changeLogSync, -endPlugin, -runfork1]
 net.maizegenetics.pangenome.liquibase.LiquibaseUpdatePlugin
-[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.pangenome.liquibase.LiquibaseUpdatePlugin: time: Feb 28, 2020 22:39:28
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.pangenome.liquibase.LiquibaseUpdatePlugin: time: Mar 2, 2020 22:35:25
 [pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - 
 LiquibaseUpdatePlugin Parameters
 outputDir: /tempFileDir/outputDir
 command: changeLogSync
 
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.liquibase.LiquibaseUpdatePlugin - Please wait, begin Command:liquibase --driver=org.sqlite.JDBC --url=jdbc:sqlite:/tempFileDir/outputDir/group3_wheat1A1B1D.db --username=sqlite --password=sqlite --changeLogFile=/liquibase/changelogs/db.changelog-master.xml changeLogSync
-[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Finished net.maizegenetics.pangenome.liquibase.LiquibaseUpdatePlugin: time: Feb 28, 2020 22:39:31
-[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.liquibase.LiquibaseUpdatePlugin: time: Feb 28, 2020 22:39:31: progress: 100%
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Finished net.maizegenetics.pangenome.liquibase.LiquibaseUpdatePlugin: time: Mar 2, 2020 22:35:31
+[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.liquibase.LiquibaseUpdatePlugin: time: Mar 2, 2020 22:35:31: progress: 100%
 [pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - net.maizegenetics.pangenome.liquibase.LiquibaseUpdatePlugin  Citation: Bradbury PJ, Zhang Z, Kroon DE, Casstevens TM, Ramdoss Y, Buckler ES. (2007) TASSEL: Software for association mapping of complex traits in diverse samples. Bioinformatics 23:2633-2635.

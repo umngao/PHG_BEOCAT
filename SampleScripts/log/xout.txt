@@ -9,7 +9,7 @@ Tassel Pipeline Arguments: -debug -HaplotypeGraphBuilderPlugin -configFile /Crea
 [main] INFO net.maizegenetics.pipeline.TasselPipeline - Tassel Pipeline Arguments: [-fork1, -HaplotypeGraphBuilderPlugin, -configFile, /CreateHaplotypes.sh, -methods, /CreateHaplotypesFromFastq.groovy, -includeVariantContexts, true, -endPlugin, -RunHapConsensusPipelinePlugin, -ref, /tempFileDir/data/reference//CreateHaplotypesFromBAM.groovy, -dbConfigFile, /CreateHaplotypes.sh, -collapseMethod, /CreateHaplotypesFromGVCF.groovy, -collapseMethodDetails, /CreateHaplotypesFromGVCF.groovy for creating Consensus, -minFreq, 0.5, -endPlugin, -runfork1]
 net.maizegenetics.pangenome.api.HaplotypeGraphBuilderPlugin
    net.maizegenetics.pangenome.hapcollapse.RunHapConsensusPipelinePlugin
-[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.pangenome.api.HaplotypeGraphBuilderPlugin: time: Feb 28, 2020 22:10:3
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.pangenome.api.HaplotypeGraphBuilderPlugin: time: Mar 2, 2020 20:39:44
 [pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - 
 HaplotypeGraphBuilderPlugin Parameters
 configFile: /CreateHaplotypes.sh
@@ -67,7 +67,7 @@ Tassel Pipeline Arguments: -debug -HaplotypeGraphBuilderPlugin -configFile /Crea
 [main] INFO net.maizegenetics.pipeline.TasselPipeline - Tassel Pipeline Arguments: [-fork1, -HaplotypeGraphBuilderPlugin, -configFile, /CreateHaplotypes.sh, -methods, /CreateHaplotypesFromFastq.groovy, -includeVariantContexts, true, -endPlugin, -RunHapConsensusPipelinePlugin, -ref, /tempFileDir/data/reference//CreateHaplotypesFromBAM.groovy, -dbConfigFile, /CreateHaplotypes.sh, -collapseMethod, /CreateHaplotypesFromGVCF.groovy, -collapseMethodDetails, /CreateHaplotypesFromGVCF.groovy for creating Consensus, -minFreq, 0.5, -endPlugin, -runfork1]
 net.maizegenetics.pangenome.api.HaplotypeGraphBuilderPlugin
    net.maizegenetics.pangenome.hapcollapse.RunHapConsensusPipelinePlugin
-[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.pangenome.api.HaplotypeGraphBuilderPlugin: time: Feb 28, 2020 22:10:4
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.pangenome.api.HaplotypeGraphBuilderPlugin: time: Mar 2, 2020 20:39:45
 [pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - 
 HaplotypeGraphBuilderPlugin Parameters
 configFile: /CreateHaplotypes.sh
