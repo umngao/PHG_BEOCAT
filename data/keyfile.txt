@@ -1,0 +1,4 @@
+sample_name	sample_description	files	type	chrPhased	genePhased	phasingConf	library_ID
+AGS2000	Feb2020_workshop_AGS2000	AGS2000.g.vcf.gz	GVCF	true	true	1.0	none
+AGS2020	Feb2020_workshop_AGS2020	AGS2020.g.vcf.gz	GVCF	true	true	1.0	none
+ARTHUR	Feb2020_workshop_ARTHUR	ARTHUR.g.vcf.gz	GVCF	true	true	1.0	none

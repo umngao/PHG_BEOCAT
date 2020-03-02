@@ -1,0 +1,39 @@
+#database config parameters
+host=localHost
+user=sqlite
+password=sqlite
+DB=/tempFileDir/outputDir/group3_wheat1A1B1D.db
+DBtype=sqlite
+
+#Java arguments
+Xmx=60G
+
+#assembly processing parameters
+assemblyEntryPoint=all
+
+# create haplotypes from gvcf parameters
+referenceFasta=/tempFileDir/data/reference/reference.fa
+LoadHaplotypesFromGVCFPlugin.keyFile=/tempFileDir/data/keyfile.txt
+LoadHaplotypesFromGVCFPlugin.gvcfDir=/tempFileDir/data/gvcfs/
+LoadHaplotypesFromGVCFPlugin.referenceFasta=/tempFileDir/data/reference/reference.fa
+LoadHaplotypesFromGVCFPlugin.haplotypeMethodName=HAPLOTYPES_METHOD
+LoadHaplotypesFromGVCFPlugin.haplotypeMethodDescription="groovy from gvcf"
+extendedWindowSize=1000
+numThreads=10
+#tempFileDir=/tempFileDir/data/bam/temp/
+
+#Consensus parameters
+includeVariants=true
+mxDiv=.001
+maxError=0.2
+
+
+#FindPath Config parameters
+maxNodes=30
+minReads=0
+maxReads=100
+minTransitionProb=0.001
+probCorrect=0.99
+BestHaplotypePathPlugin.minTaxa=1
+
+
