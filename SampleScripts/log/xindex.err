@@ -1,0 +1,51 @@
+/bin/bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
++ TEMP_DIR=/tempFileDir
++ OUTPUT_DIR=/tempFileDir/outputDir
++ DATA_DIR=/tempFileDir/data
++ PANGENOME_DIR=/tempFileDir/outputDir/pangenome
++ '[' '!' -d /tempFileDir/outputDir/pangenome ']'
++ BASE_HAPLOTYPE_NAME=wheat1ABD_pangenome_fasta
++ CONFIGFILE=/tempFileDir/data/config.txt
++ CONFIGFILE_NAME=config.txt
++ HAPLOTYPE_METHOD=CONSENSUS
++ NUM_BASES_LOADED=4G
++ MINIMIZER_SIZE=21
++ WINDOW_SIZE=11
++ HAPLOTYPE_FASTA=/tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.fa
++ HAPLOTYPE_INDEX=/tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.mmi
++ fullXmx=
+++ grep '^Xmx=' /tempFileDir/data/config.txt
+++ cut -d= -f2
++ memoryString=60G
++ [[ 60G != '' ]]
++ fullXmx=-Xmx60G
++ [[ -f /tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.fa ]]
++ echo 'Creating Haplotype Fasta File /tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.fa.'
++ /tassel-5-standalone/run_pipeline.pl -Xmx60G -debug -HaplotypeGraphBuilderPlugin -configFile /tempFileDir/data/config.txt -methods CONSENSUS -includeVariantContexts false -endPlugin -WriteFastaFromGraphPlugin -outputFile /tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.fa -endPlugin
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "en_US.UTF-8",
+	LC_CTYPE = "en_US.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+
+real	0m4.451s
+user	0m6.500s
+sys	0m1.165s
++ [[ -f /tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.mmi ]]
++ echo 'Creating Minimap2 Index for /tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.fa.'
++ /minimap2/minimap2 -d /tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.mmi -k 21 -I 4G -w 11 /tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.fa
+[M::mm_idx_gen::3.273*1.01] collected minimizers
+[M::mm_idx_gen::3.649*1.21] sorted minimizers
+[M::main::4.052*1.18] loaded/built the index for 14305 target sequence(s)
+[M::mm_idx_stat] kmer size: 21; skip: 11; is_hpc: 0; #seq: 14305
+[M::mm_idx_stat::4.144*1.18] distinct minimizers: 5802329 (72.71% are singletons); average occurrences: 1.419; average spacing: 6.120; total length: 50399943
+[M::main] Version: 2.17-r974-dirty
+[M::main] CMD: /minimap2/minimap2 -d /tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.mmi -k 21 -I 4G -w 11 /tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.fa
+[M::main] Real time: 4.192 sec; CPU: 4.938 sec; Peak RSS: 0.334 GB
+
+real	0m4.211s
+user	0m4.146s
+sys	0m0.809s

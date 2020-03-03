@@ -7,11 +7,10 @@
 # in the directory mounted to /tempFileDir/data
 # It assumes your sqlite database lives in the directory mounted to /tempFileDir/outputDir/  This in only relevant when running an SQLite database.  This path shows up in the config file, parameter "db".
 
-phg_simg="/homes/lianggao/software/phg/phg.sandbox.200302.simg"
+phg_simg="/homes/lianggao/software/phg/phg.200302.simg"
 base_dir="/homes/${USER}/workshop/PHG/BEOCAT"
 
-
-SINGULARITYENV_CLASSPATH=/:/gatk/gatk.jar singularity exec -w \
+singularity exec \
         -B $base_dir:/tempFileDir \
          $phg_simg \
         /LoadGenomeIntervals.sh config.txt reference.fa  intervals.bed ref_load_data.txt true

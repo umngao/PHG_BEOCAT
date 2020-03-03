@@ -1,6 +1,4 @@
-[33mWARNING: Non existent mountpoint (directory) in container: '/var/singularity/mnt/final/homes'
-[0m[33mWARNING: Could not chdir to home: /homes/lianggao
-[0mperl: warning: Setting locale failed.
+perl: warning: Setting locale failed.
 perl: warning: Please check that your locale settings:
 	LANGUAGE = (unset),
 	LC_ALL = "en_US.UTF-8",

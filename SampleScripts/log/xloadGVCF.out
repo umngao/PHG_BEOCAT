@@ -9,7 +9,7 @@ Tassel Pipeline Arguments: -debug -CreateIntervalBedFilesPlugin -dbConfigFile /t
 [main] INFO net.maizegenetics.tassel.TasselLogging - Number of Processors: 16
 [main] INFO net.maizegenetics.pipeline.TasselPipeline - Tassel Pipeline Arguments: [-fork1, -CreateIntervalBedFilesPlugin, -dbConfigFile, /tempFileDir/data/config.txt, -bedFile, /tempFileDir/data/bam/temp/intervals.bed, -extendedBedFile, /tempFileDir/data/bam/temp/intervals_plusminus1000.bed, -windowSize, 1000, -refRangeMethods, refRegionGroup, -endPlugin, -runfork1]
 net.maizegenetics.pangenome.db_loading.CreateIntervalBedFilesPlugin
-[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.pangenome.db_loading.CreateIntervalBedFilesPlugin: time: Mar 2, 2020 22:38:16
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.pangenome.db_loading.CreateIntervalBedFilesPlugin: time: Mar 3, 2020 18:10:35
 [pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - 
 CreateIntervalBedFilesPlugin Parameters
 dbConfigFile: /tempFileDir/data/config.txt
@@ -27,10 +27,10 @@ refRangeMethods: refRegionGroup
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - referenceRanges: query statement: select reference_ranges.ref_range_id, chrom, range_start, range_end, methods.name from reference_ranges  INNER JOIN ref_range_ref_range_method on ref_range_ref_range_method.ref_range_id=reference_ranges.ref_range_id  INNER JOIN methods on ref_range_ref_range_method.method_id = methods.method_id  AND methods.method_type = 7 ORDER BY reference_ranges.ref_range_id
 methods size: 1
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - referenceRanges: number of reference ranges: 26508
-[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - referenceRanges: time: 0.419486262 secs.
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - referenceRanges: time: 0.453568156 secs.
 [pool-1-thread-1] DEBUG net.maizegenetics.pangenome.db_loading.CreateIntervalBedFilesPlugin - Writing out the BED files using the reference ranges pulled from the graph.
-[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Finished net.maizegenetics.pangenome.db_loading.CreateIntervalBedFilesPlugin: time: Mar 2, 2020 22:38:17
-[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.db_loading.CreateIntervalBedFilesPlugin: time: Mar 2, 2020 22:38:17: progress: 100%
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Finished net.maizegenetics.pangenome.db_loading.CreateIntervalBedFilesPlugin: time: Mar 3, 2020 18:10:36
+[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.db_loading.CreateIntervalBedFilesPlugin: time: Mar 3, 2020 18:10:36: progress: 100%
 [pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - net.maizegenetics.pangenome.db_loading.CreateIntervalBedFilesPlugin  Citation: Bradbury PJ, Zhang Z, Kroon DE, Casstevens TM, Ramdoss Y, Buckler ES. (2007) TASSEL: Software for association mapping of complex traits in diverse samples. Bioinformatics 23:2633-2635.
 perl /tassel-5-standalone/run_pipeline.pl -Xmx60G -debug -configParameters /tempFileDir/data/config.txt -LoadHaplotypesFromGVCFPlugin -bedFile /tempFileDir/data/bam/temp/intervals.bed -endPlugin
 /tassel-5-standalone/lib/jfreesvg-3.2.jar:/tassel-5-standalone/lib/ejml-0.23.jar:/tassel-5-standalone/lib/gs-core-1.3.jar:/tassel-5-standalone/lib/biojava-alignment-4.0.0.jar:/tassel-5-standalone/lib/commons-codec-1.10.jar:/tassel-5-standalone/lib/javax.json-1.0.4.jar:/tassel-5-standalone/lib/kotlinx-coroutines-core-1.3.0.jar:/tassel-5-standalone/lib/fastutil-8.2.2.jar:/tassel-5-standalone/lib/mail-1.4.jar:/tassel-5-standalone/lib/junit-4.10.jar:/tassel-5-standalone/lib/gs-ui-1.3.jar:/tassel-5-standalone/lib/guava-22.0.jar:/tassel-5-standalone/lib/biojava-core-4.0.0.jar:/tassel-5-standalone/lib/biojava-phylo-4.0.0.jar:/tassel-5-standalone/lib/htsjdk-2.19.0.jar:/tassel-5-standalone/lib/sqlite-jdbc-3.8.5-pre1.jar:/tassel-5-standalone/lib/itextpdf-5.1.0.jar:/tassel-5-standalone/lib/phg.jar:/tassel-5-standalone/lib/scala-library-2.10.1.jar:/tassel-5-standalone/lib/jcommon-1.0.23.jar:/tassel-5-standalone/lib/kotlin-stdlib-1.3.50.jar:/tassel-5-standalone/lib/jfreechart-1.0.19.jar:/tassel-5-standalone/lib/json-simple-1.1.1.jar:/tassel-5-standalone/lib/jhdf5-14.12.5.jar:/tassel-5-standalone/lib/slf4j-simple-1.7.10.jar:/tassel-5-standalone/lib/colt-1.2.0.jar:/tassel-5-standalone/lib/log4j-1.2.13.jar:/tassel-5-standalone/lib/forester-1.038.jar:/tassel-5-standalone/lib/commons-math3-3.4.1.jar:/tassel-5-standalone/lib/slf4j-api-1.7.10.jar:/tassel-5-standalone/lib/postgresql-9.4-1201.jdbc41.jar:/tassel-5-standalone/lib/ahocorasick-0.2.4.jar:/tassel-5-standalone/lib/snappy-java-1.1.1.6.jar:/tassel-5-standalone/lib/trove-3.0.3.jar:/tassel-5-standalone/sTASSEL.jar
@@ -69,7 +69,7 @@ Tassel Pipeline Arguments: -debug -configParameters /tempFileDir/data/config.txt
 [main] INFO net.maizegenetics.tassel.TasselLogging - Number of Processors: 16
 [main] INFO net.maizegenetics.pipeline.TasselPipeline - Tassel Pipeline Arguments: [-fork1, -LoadHaplotypesFromGVCFPlugin, -bedFile, /tempFileDir/data/bam/temp/intervals.bed, -endPlugin, -runfork1]
 net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin
-[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin: time: Mar 2, 2020 22:38:18
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin: time: Mar 3, 2020 18:10:37
 [pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - 
 LoadHaplotypesFromGVCFPlugin Parameters
 keyFile: /tempFileDir/data/keyfile.txt
@@ -108,459 +108,459 @@ Genome FASTA character conversion: ACGTNacgtn to ACGTNacgtn
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Adding: AGS2020
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Adding: ARTHUR
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Done Adding KeyFile entries to the inputChannel:
-[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Attempting to create GVCF Sequence for /tempFileDir/data/gvcfs/ARTHUR.g.vcf.gz
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Attempting to create GVCF Sequence for /tempFileDir/data/gvcfs/AGS2020.g.vcf.gz
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Done setting up variables for file /tempFileDir/data/gvcfs/AGS2020.g.vcf.gz. Moving on to processing reference ranges.
-[DefaultDispatcher-worker-4] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Attempting to create GVCF Sequence for /tempFileDir/data/gvcfs/AGS2000.g.vcf.gz
-[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Done setting up variables for file /tempFileDir/data/gvcfs/ARTHUR.g.vcf.gz. Moving on to processing reference ranges.
-[DefaultDispatcher-worker-4] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Done setting up variables for file /tempFileDir/data/gvcfs/AGS2000.g.vcf.gz. Moving on to processing reference ranges.
-[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - 
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Attempting to create GVCF Sequence for /tempFileDir/data/gvcfs/AGS2000.g.vcf.gz
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Done setting up variables for file /tempFileDir/data/gvcfs/AGS2000.g.vcf.gz. Moving on to processing reference ranges.
+[DefaultDispatcher-worker-2] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Attempting to create GVCF Sequence for /tempFileDir/data/gvcfs/AGS2020.g.vcf.gz
+[DefaultDispatcher-worker-2] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Done setting up variables for file /tempFileDir/data/gvcfs/AGS2020.g.vcf.gz. Moving on to processing reference ranges.
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Attempting to create GVCF Sequence for /tempFileDir/data/gvcfs/ARTHUR.g.vcf.gz
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Done setting up variables for file /tempFileDir/data/gvcfs/ARTHUR.g.vcf.gz. Moving on to processing reference ranges.
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - 
 Staging ARTHUR chrom 1A for DB uploading.
-[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating Sequences for  Chr:1B for Line: ARTHUR : 3.214879533sec
-[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating GVCFSequence for  Chr:1B for Line: ARTHUR : 2.366294999sec
-[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating Chr:1B for Line: ARTHUR : 12.830817616sec
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - 
-Staging AGS2020 chrom 1A for DB uploading.
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating Sequences for  Chr:1B for Line: AGS2020 : 2.796158421sec
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating GVCFSequence for  Chr:1B for Line: AGS2020 : 1.944747026sec
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating Chr:1B for Line: AGS2020 : 13.266567538sec
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating Sequences for  Chr:1B for Line: ARTHUR : 2.621218151sec
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating GVCFSequence for  Chr:1B for Line: ARTHUR : 1.706475001sec
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating Chr:1B for Line: ARTHUR : 12.884311277sec
 -------------------------------
-Current Heap Size: 1,415 MB
+Current Heap Size: 1,433 MB
 Max Available Heap: 54613 MB
 -------------------------------
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess - db is setup, init prepared statements, load hash table
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess - db is setup, init prepared statements, load hash table
 
  beginning - isSqlite is true
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all geneotypes in genotype table=1
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - refRangeRefRangeIDMap is null, creating new one with size : 26508
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadAnchorHash: at end, size of refRangeRefRangeIDMap: 26508, number of rs.next processed: 26508
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all methods in method table=3
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all groups in gamete_groups table=1
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all gametes in gametes table=1
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading readMappingHash, size of all read_mappings in read_mapping table=0
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - DBProcessing Line: ARTHUR Chr: 1A
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all geneotypes in genotype table=2
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putGenoAndHaploTypeData: adding gamete for genoid 2, hapNumber 0
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all gametes in gametes table=2
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Figuring out gamete Group Id for ARTHUR chr:1A
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all groups in gamete_groups table=2
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putMethod: added method HAPLOTYPES_METHOD to methods table
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all methods in method table=4
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Writing ARTHUR chr:1A to the DB.
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=0
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1A';
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 0
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=0
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1A';
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 0
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: time to load allel and variants hash: 3.55665E-4 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to addToMissingAlleleList: 0.201191664 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: calling putAlleleData with size 442
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putAlleleData: total loaded to alleles table: 442
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:loadAlleleHash: added string NONE to alleles table
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load allele data: 0.189528758 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: second pass, getVariantData
-[DefaultDispatcher-worker-4] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - 
-Staging AGS2000 chrom 1A for DB uploading.
-[DefaultDispatcher-worker-4] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating Sequences for  Chr:1B for Line: AGS2000 : 3.327701207sec
-[DefaultDispatcher-worker-4] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating GVCFSequence for  Chr:1B for Line: AGS2000 : 2.41192428sec
-[DefaultDispatcher-worker-4] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating Chr:1B for Line: AGS2000 : 19.509508232sec
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to getVariantData : 7.634596103 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putVariantMappingData: total loaded to variant_mapping table: 7859
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=7859
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1A';
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 7859
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load variants data: 0.580909088 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypeData calling putHaploytpesForGamete
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - Begin putHaplotypesForGamete, number anchorSequences to load: 4253
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypes: starting to commit haplotypes
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all geneotypes in genotype table=1
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - refRangeRefRangeIDMap is null, creating new one with size : 26508
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadAnchorHash: at end, size of refRangeRefRangeIDMap: 26508, number of rs.next processed: 26508
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all methods in method table=3
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all groups in gamete_groups table=1
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all gametes in gametes table=1
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading readMappingHash, size of all read_mappings in read_mapping table=0
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - DBProcessing Line: ARTHUR Chr: 1A
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all geneotypes in genotype table=2
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putGenoAndHaploTypeData: adding gamete for genoid 2, hapNumber 0
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all gametes in gametes table=2
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Figuring out gamete Group Id for ARTHUR chr:1A
+[DefaultDispatcher-worker-2] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - 
+Staging AGS2020 chrom 1A for DB uploading.
+[DefaultDispatcher-worker-2] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating Sequences for  Chr:1B for Line: AGS2020 : 4.094597921sec
+[DefaultDispatcher-worker-2] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating GVCFSequence for  Chr:1B for Line: AGS2020 : 3.0639122sec
+[DefaultDispatcher-worker-2] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating Chr:1B for Line: AGS2020 : 16.967144648sec
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all groups in gamete_groups table=2
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putMethod: added method HAPLOTYPES_METHOD to methods table
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all methods in method table=4
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Writing ARTHUR chr:1A to the DB.
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=0
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1A';
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 0
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=0
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1A';
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 0
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: time to load allel and variants hash: 3.15855E-4 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to addToMissingAlleleList: 0.225052315 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: calling putAlleleData with size 442
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putAlleleData: total loaded to alleles table: 442
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:loadAlleleHash: added string NONE to alleles table
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load allele data: 0.110672764 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: second pass, getVariantData
 [DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - 
+Staging AGS2000 chrom 1A for DB uploading.
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating Sequences for  Chr:1B for Line: AGS2000 : 3.407179282sec
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating GVCFSequence for  Chr:1B for Line: AGS2000 : 2.040618095sec
+[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating Chr:1B for Line: AGS2000 : 19.151869317sec
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to getVariantData : 5.671410433 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putVariantMappingData: total loaded to variant_mapping table: 7859
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=7859
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1A';
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 7859
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load variants data: 0.479502404 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypeData calling putHaploytpesForGamete
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - Begin putHaplotypesForGamete, number anchorSequences to load: 4253
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypes: starting to commit haplotypes
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - 
 Staging ARTHUR chrom 1B for DB uploading.
-[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating Sequences for  Chr:1D for Line: ARTHUR : 2.977519894sec
-[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating GVCFSequence for  Chr:1D for Line: ARTHUR : 2.13355469sec
-[DefaultDispatcher-worker-1] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating Chr:1D for Line: ARTHUR : 16.824733644sec
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaployptes - total count loaded to haplotypes table: 4253
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to load haplotypes : 3.882037148 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: Finished batch, total processed = 4253
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Done DBProcessing Line: ARTHUR Chr: 1A
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating Sequences for  Chr:1D for Line: ARTHUR : 3.073598143sec
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating GVCFSequence for  Chr:1D for Line: ARTHUR : 1.953429359sec
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating Chr:1D for Line: ARTHUR : 13.351301862sec
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaployptes - total count loaded to haplotypes table: 4253
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to load haplotypes : 2.915636504 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: Finished batch, total processed = 4253
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Done DBProcessing Line: ARTHUR Chr: 1A
 -------------------------------
 Current Heap Size: 1,472 MB
 Max Available Heap: 54613 MB
 -------------------------------
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess - db is setup, init prepared statements, load hash table
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess - db is setup, init prepared statements, load hash table
 
  beginning - isSqlite is true
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all geneotypes in genotype table=2
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - refRangeRefRangeIDMap is null, creating new one with size : 26508
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadAnchorHash: at end, size of refRangeRefRangeIDMap: 26508, number of rs.next processed: 26508
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all methods in method table=4
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all groups in gamete_groups table=2
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all gametes in gametes table=2
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading readMappingHash, size of all read_mappings in read_mapping table=0
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - DBProcessing Line: AGS2020 Chr: 1A
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all geneotypes in genotype table=3
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putGenoAndHaploTypeData: adding gamete for genoid 3, hapNumber 0
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all gametes in gametes table=3
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Figuring out gamete Group Id for AGS2020 chr:1A
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all groups in gamete_groups table=3
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Writing AGS2020 chr:1A to the DB.
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=7859
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1A';
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 7859
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=7859
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1A';
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 7859
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: time to load allel and variants hash: 0.114732286 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to addToMissingAlleleList: 0.167306551 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: calling putAlleleData with size 432
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putAlleleData: total loaded to alleles table: 432
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:loadAlleleHash: added string NONE to alleles table
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load allele data: 0.099241314 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: second pass, getVariantData
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to getVariantData : 4.984065493 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putVariantMappingData: total loaded to variant_mapping table: 4411
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=12270
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1A';
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 12270
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load variants data: 0.761013336 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypeData calling putHaploytpesForGamete
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - Begin putHaplotypesForGamete, number anchorSequences to load: 4253
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypes: starting to commit haplotypes
-[DefaultDispatcher-worker-14] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - 
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all geneotypes in genotype table=2
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - refRangeRefRangeIDMap is null, creating new one with size : 26508
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadAnchorHash: at end, size of refRangeRefRangeIDMap: 26508, number of rs.next processed: 26508
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all methods in method table=4
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all groups in gamete_groups table=2
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all gametes in gametes table=2
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading readMappingHash, size of all read_mappings in read_mapping table=0
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - DBProcessing Line: AGS2020 Chr: 1A
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all geneotypes in genotype table=3
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putGenoAndHaploTypeData: adding gamete for genoid 3, hapNumber 0
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all gametes in gametes table=3
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Figuring out gamete Group Id for AGS2020 chr:1A
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all groups in gamete_groups table=3
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Writing AGS2020 chr:1A to the DB.
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=7859
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1A';
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 7859
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=7859
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1A';
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 7859
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: time to load allel and variants hash: 0.114303113 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to addToMissingAlleleList: 0.20052486 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: calling putAlleleData with size 432
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putAlleleData: total loaded to alleles table: 432
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:loadAlleleHash: added string NONE to alleles table
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load allele data: 0.155837789 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: second pass, getVariantData
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to getVariantData : 7.448224499 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putVariantMappingData: total loaded to variant_mapping table: 4411
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=12270
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1A';
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 12270
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load variants data: 0.596122774 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypeData calling putHaploytpesForGamete
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - Begin putHaplotypesForGamete, number anchorSequences to load: 4253
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypes: starting to commit haplotypes
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - 
 Staging AGS2020 chrom 1B for DB uploading.
-[DefaultDispatcher-worker-14] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating Sequences for  Chr:1D for Line: AGS2020 : 2.484908391sec
-[DefaultDispatcher-worker-14] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating GVCFSequence for  Chr:1D for Line: AGS2020 : 1.677461332sec
-[DefaultDispatcher-worker-14] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating Chr:1D for Line: AGS2020 : 29.907146311sec
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaployptes - total count loaded to haplotypes table: 4253
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to load haplotypes : 3.016248319 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: Finished batch, total processed = 4253
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Done DBProcessing Line: AGS2020 Chr: 1A
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating Sequences for  Chr:1D for Line: AGS2020 : 4.26221506sec
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating GVCFSequence for  Chr:1D for Line: AGS2020 : 3.45930686sec
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating Chr:1D for Line: AGS2020 : 24.883692112sec
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaployptes - total count loaded to haplotypes table: 4253
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to load haplotypes : 2.75199577 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: Finished batch, total processed = 4253
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Done DBProcessing Line: AGS2020 Chr: 1A
 -------------------------------
 Current Heap Size: 1,489 MB
 Max Available Heap: 54613 MB
 -------------------------------
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess - db is setup, init prepared statements, load hash table
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess - db is setup, init prepared statements, load hash table
 
  beginning - isSqlite is true
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all geneotypes in genotype table=3
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - refRangeRefRangeIDMap is null, creating new one with size : 26508
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadAnchorHash: at end, size of refRangeRefRangeIDMap: 26508, number of rs.next processed: 26508
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all methods in method table=4
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all groups in gamete_groups table=3
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all gametes in gametes table=3
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading readMappingHash, size of all read_mappings in read_mapping table=0
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - DBProcessing Line: AGS2000 Chr: 1A
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all geneotypes in genotype table=4
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putGenoAndHaploTypeData: adding gamete for genoid 4, hapNumber 0
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all gametes in gametes table=4
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Figuring out gamete Group Id for AGS2000 chr:1A
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all groups in gamete_groups table=4
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Writing AGS2000 chr:1A to the DB.
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=12270
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1A';
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 12270
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=12270
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1A';
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 12270
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: time to load allel and variants hash: 0.158121103 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to addToMissingAlleleList: 0.167002931 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: calling putAlleleData with size 494
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putAlleleData: total loaded to alleles table: 494
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:loadAlleleHash: added string NONE to alleles table
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load allele data: 0.06461401 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: second pass, getVariantData
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to getVariantData : 5.574253181 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putVariantMappingData: total loaded to variant_mapping table: 3962
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=16232
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1A';
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 16232
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load variants data: 0.822508221 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypeData calling putHaploytpesForGamete
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - Begin putHaplotypesForGamete, number anchorSequences to load: 4253
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypes: starting to commit haplotypes
-[DefaultDispatcher-worker-9] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - 
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all geneotypes in genotype table=3
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - refRangeRefRangeIDMap is null, creating new one with size : 26508
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadAnchorHash: at end, size of refRangeRefRangeIDMap: 26508, number of rs.next processed: 26508
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all methods in method table=4
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all groups in gamete_groups table=3
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all gametes in gametes table=3
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading readMappingHash, size of all read_mappings in read_mapping table=0
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - DBProcessing Line: AGS2000 Chr: 1A
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all geneotypes in genotype table=4
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putGenoAndHaploTypeData: adding gamete for genoid 4, hapNumber 0
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all gametes in gametes table=4
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Figuring out gamete Group Id for AGS2000 chr:1A
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all groups in gamete_groups table=4
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Writing AGS2000 chr:1A to the DB.
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=12270
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1A';
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 12270
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=12270
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1A';
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 12270
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: time to load allel and variants hash: 0.162555029 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to addToMissingAlleleList: 0.199054109 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: calling putAlleleData with size 494
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putAlleleData: total loaded to alleles table: 494
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:loadAlleleHash: added string NONE to alleles table
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load allele data: 0.097128132 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: second pass, getVariantData
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to getVariantData : 6.615536722 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putVariantMappingData: total loaded to variant_mapping table: 3962
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=16232
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1A';
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 16232
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load variants data: 0.492766229 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypeData calling putHaploytpesForGamete
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - Begin putHaplotypesForGamete, number anchorSequences to load: 4253
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypes: starting to commit haplotypes
+[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - 
 Staging AGS2000 chrom 1B for DB uploading.
-[DefaultDispatcher-worker-9] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating Sequences for  Chr:1D for Line: AGS2000 : 1.98204279sec
-[DefaultDispatcher-worker-9] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating GVCFSequence for  Chr:1D for Line: AGS2000 : 1.256612814sec
-[DefaultDispatcher-worker-9] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating Chr:1D for Line: AGS2000 : 36.738348043sec
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaployptes - total count loaded to haplotypes table: 4253
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to load haplotypes : 2.996035832 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: Finished batch, total processed = 4253
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Done DBProcessing Line: AGS2000 Chr: 1A
+[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating Sequences for  Chr:1D for Line: AGS2000 : 2.054196547sec
+[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating GVCFSequence for  Chr:1D for Line: AGS2000 : 1.294321128sec
+[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating Chr:1D for Line: AGS2000 : 36.067285265sec
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaployptes - total count loaded to haplotypes table: 4253
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to load haplotypes : 2.759715119 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: Finished batch, total processed = 4253
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Done DBProcessing Line: AGS2000 Chr: 1A
 -------------------------------
 Current Heap Size: 1,459 MB
 Max Available Heap: 54613 MB
 -------------------------------
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess - db is setup, init prepared statements, load hash table
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess - db is setup, init prepared statements, load hash table
 
  beginning - isSqlite is true
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all geneotypes in genotype table=4
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - refRangeRefRangeIDMap is null, creating new one with size : 26508
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadAnchorHash: at end, size of refRangeRefRangeIDMap: 26508, number of rs.next processed: 26508
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all methods in method table=4
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all groups in gamete_groups table=4
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all gametes in gametes table=4
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading readMappingHash, size of all read_mappings in read_mapping table=0
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - DBProcessing Line: ARTHUR Chr: 1B
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Figuring out gamete Group Id for ARTHUR chr:1B
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Writing ARTHUR chr:1B to the DB.
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=16232
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1B';
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 0
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=16232
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1B';
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 0
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: time to load allel and variants hash: 2.85722E-4 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to addToMissingAlleleList: 0.220559522 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: calling putAlleleData with size 445
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putAlleleData: total loaded to alleles table: 445
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:loadAlleleHash: added string NONE to alleles table
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load allele data: 0.185972981 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: second pass, getVariantData
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to getVariantData : 5.643404725 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putVariantMappingData: total loaded to variant_mapping table: 7112
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=23344
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1B';
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 7112
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load variants data: 0.429155726 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypeData calling putHaploytpesForGamete
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - Begin putHaplotypesForGamete, number anchorSequences to load: 4615
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypes: starting to commit haplotypes
-[DefaultDispatcher-worker-4] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - 
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all geneotypes in genotype table=4
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - refRangeRefRangeIDMap is null, creating new one with size : 26508
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadAnchorHash: at end, size of refRangeRefRangeIDMap: 26508, number of rs.next processed: 26508
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all methods in method table=4
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all groups in gamete_groups table=4
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all gametes in gametes table=4
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading readMappingHash, size of all read_mappings in read_mapping table=0
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - DBProcessing Line: ARTHUR Chr: 1B
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Figuring out gamete Group Id for ARTHUR chr:1B
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Writing ARTHUR chr:1B to the DB.
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=16232
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1B';
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 0
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=16232
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1B';
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 0
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: time to load allel and variants hash: 2.94513E-4 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to addToMissingAlleleList: 0.180369631 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: calling putAlleleData with size 445
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putAlleleData: total loaded to alleles table: 445
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:loadAlleleHash: added string NONE to alleles table
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load allele data: 0.102567047 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: second pass, getVariantData
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to getVariantData : 7.22225902 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putVariantMappingData: total loaded to variant_mapping table: 7112
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=23344
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1B';
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 7112
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load variants data: 0.349029749 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypeData calling putHaploytpesForGamete
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - Begin putHaplotypesForGamete, number anchorSequences to load: 4615
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypes: starting to commit haplotypes
+[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - 
 Staging ARTHUR chrom 1D for DB Uploading
-[DefaultDispatcher-worker-4] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating Chr:1D for Line: ARTHUR : 40.766168253sec
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaployptes - total count loaded to haplotypes table: 4615
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to load haplotypes : 2.968550943 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: Finished batch, total processed = 4615
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Done DBProcessing Line: ARTHUR Chr: 1B
+[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating Chr:1D for Line: ARTHUR : 42.435000654sec
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaployptes - total count loaded to haplotypes table: 4615
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to load haplotypes : 2.78250285 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: Finished batch, total processed = 4615
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Done DBProcessing Line: ARTHUR Chr: 1B
 -------------------------------
 Current Heap Size: 1,456 MB
 Max Available Heap: 54613 MB
 -------------------------------
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess - db is setup, init prepared statements, load hash table
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess - db is setup, init prepared statements, load hash table
 
  beginning - isSqlite is true
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all geneotypes in genotype table=4
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - refRangeRefRangeIDMap is null, creating new one with size : 26508
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadAnchorHash: at end, size of refRangeRefRangeIDMap: 26508, number of rs.next processed: 26508
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all methods in method table=4
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all groups in gamete_groups table=4
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all gametes in gametes table=4
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading readMappingHash, size of all read_mappings in read_mapping table=0
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - DBProcessing Line: AGS2020 Chr: 1B
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Figuring out gamete Group Id for AGS2020 chr:1B
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Writing AGS2020 chr:1B to the DB.
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=23344
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1B';
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 7112
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=23344
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1B';
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 7112
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: time to load allel and variants hash: 0.086588667 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to addToMissingAlleleList: 0.208385301 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: calling putAlleleData with size 603
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putAlleleData: total loaded to alleles table: 603
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:loadAlleleHash: added string NONE to alleles table
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load allele data: 0.208764374 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: second pass, getVariantData
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to getVariantData : 5.691194883 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putVariantMappingData: total loaded to variant_mapping table: 5886
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=29230
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1B';
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 12998
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load variants data: 0.79269902 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypeData calling putHaploytpesForGamete
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - Begin putHaplotypesForGamete, number anchorSequences to load: 4615
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypes: starting to commit haplotypes
-[DefaultDispatcher-worker-11] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - 
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all geneotypes in genotype table=4
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - refRangeRefRangeIDMap is null, creating new one with size : 26508
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadAnchorHash: at end, size of refRangeRefRangeIDMap: 26508, number of rs.next processed: 26508
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all methods in method table=4
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all groups in gamete_groups table=4
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all gametes in gametes table=4
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading readMappingHash, size of all read_mappings in read_mapping table=0
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - DBProcessing Line: AGS2020 Chr: 1B
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Figuring out gamete Group Id for AGS2020 chr:1B
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Writing AGS2020 chr:1B to the DB.
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=23344
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1B';
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 7112
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=23344
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1B';
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 7112
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: time to load allel and variants hash: 0.089257491 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to addToMissingAlleleList: 0.20531626 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: calling putAlleleData with size 603
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putAlleleData: total loaded to alleles table: 603
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:loadAlleleHash: added string NONE to alleles table
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load allele data: 0.258310294 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: second pass, getVariantData
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to getVariantData : 6.113438612 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putVariantMappingData: total loaded to variant_mapping table: 5886
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=29230
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1B';
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 12998
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load variants data: 0.490609778 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypeData calling putHaploytpesForGamete
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - Begin putHaplotypesForGamete, number anchorSequences to load: 4615
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypes: starting to commit haplotypes
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - 
 Staging AGS2020 chrom 1D for DB Uploading
-[DefaultDispatcher-worker-11] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating Chr:1D for Line: AGS2020 : 40.354110662sec
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaployptes - total count loaded to haplotypes table: 4615
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to load haplotypes : 3.914085736 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: Finished batch, total processed = 4615
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Done DBProcessing Line: AGS2020 Chr: 1B
+[DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating Chr:1D for Line: AGS2020 : 39.130415083sec
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaployptes - total count loaded to haplotypes table: 4615
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to load haplotypes : 2.743140559 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: Finished batch, total processed = 4615
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Done DBProcessing Line: AGS2020 Chr: 1B
 -------------------------------
-Current Heap Size: 1,452 MB
+Current Heap Size: 1,453 MB
 Max Available Heap: 54613 MB
 -------------------------------
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess - db is setup, init prepared statements, load hash table
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess - db is setup, init prepared statements, load hash table
 
  beginning - isSqlite is true
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all geneotypes in genotype table=4
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - refRangeRefRangeIDMap is null, creating new one with size : 26508
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadAnchorHash: at end, size of refRangeRefRangeIDMap: 26508, number of rs.next processed: 26508
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all methods in method table=4
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all groups in gamete_groups table=4
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all gametes in gametes table=4
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading readMappingHash, size of all read_mappings in read_mapping table=0
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - DBProcessing Line: AGS2000 Chr: 1B
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Figuring out gamete Group Id for AGS2000 chr:1B
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Writing AGS2000 chr:1B to the DB.
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=29230
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1B';
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 12998
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=29230
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1B';
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 12998
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: time to load allel and variants hash: 0.15973054 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to addToMissingAlleleList: 0.125537762 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: calling putAlleleData with size 595
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putAlleleData: total loaded to alleles table: 595
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:loadAlleleHash: added string NONE to alleles table
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load allele data: 0.16519119 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: second pass, getVariantData
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to getVariantData : 4.44254835 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putVariantMappingData: total loaded to variant_mapping table: 5350
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=34580
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1B';
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 18348
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load variants data: 0.580008559 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypeData calling putHaploytpesForGamete
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - Begin putHaplotypesForGamete, number anchorSequences to load: 4615
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypes: starting to commit haplotypes
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaployptes - total count loaded to haplotypes table: 4615
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to load haplotypes : 2.721944597 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: Finished batch, total processed = 4615
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Done DBProcessing Line: AGS2000 Chr: 1B
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all geneotypes in genotype table=4
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - refRangeRefRangeIDMap is null, creating new one with size : 26508
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadAnchorHash: at end, size of refRangeRefRangeIDMap: 26508, number of rs.next processed: 26508
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all methods in method table=4
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all groups in gamete_groups table=4
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all gametes in gametes table=4
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading readMappingHash, size of all read_mappings in read_mapping table=0
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - DBProcessing Line: AGS2000 Chr: 1B
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Figuring out gamete Group Id for AGS2000 chr:1B
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Writing AGS2000 chr:1B to the DB.
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=29230
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1B';
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 12998
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=29230
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1B';
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 12998
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: time to load allel and variants hash: 0.165851899 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to addToMissingAlleleList: 0.152243769 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: calling putAlleleData with size 595
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putAlleleData: total loaded to alleles table: 595
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:loadAlleleHash: added string NONE to alleles table
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load allele data: 0.196020586 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: second pass, getVariantData
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to getVariantData : 3.56658764 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putVariantMappingData: total loaded to variant_mapping table: 5350
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=34580
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1B';
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 18348
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load variants data: 0.763072798 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypeData calling putHaploytpesForGamete
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - Begin putHaplotypesForGamete, number anchorSequences to load: 4615
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypes: starting to commit haplotypes
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaployptes - total count loaded to haplotypes table: 4615
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to load haplotypes : 2.782409334 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: Finished batch, total processed = 4615
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Done DBProcessing Line: AGS2000 Chr: 1B
 -------------------------------
-Current Heap Size: [DefaultDispatcher-worker-3] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - 
+Current Heap Size: [DefaultDispatcher-worker-8] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - 
 Done Processing ARTHUR Adding to the queue for DB Uploading.
-1,611 MB
+1,600 MB
 Max Available Heap: 54613 MB
 -------------------------------
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess - db is setup, init prepared statements, load hash table
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess - db is setup, init prepared statements, load hash table
 
  beginning - isSqlite is true
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all geneotypes in genotype table=4
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - refRangeRefRangeIDMap is null, creating new one with size : 26508
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadAnchorHash: at end, size of refRangeRefRangeIDMap: 26508, number of rs.next processed: 26508
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all methods in method table=4
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all groups in gamete_groups table=4
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all gametes in gametes table=4
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading readMappingHash, size of all read_mappings in read_mapping table=0
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - DBProcessing Line: ARTHUR Chr: 1D
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Figuring out gamete Group Id for ARTHUR chr:1D
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Writing ARTHUR chr:1D to the DB.
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=34580
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1D';
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 0
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=34580
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1D';
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 0
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: time to load allel and variants hash: 3.35703E-4 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to addToMissingAlleleList: 0.170586903 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: calling putAlleleData with size 310
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putAlleleData: total loaded to alleles table: 310
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:loadAlleleHash: added string NONE to alleles table
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load allele data: 0.141477054 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: second pass, getVariantData
-[DefaultDispatcher-worker-15] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - 
-Staging AGS2000 chrom 1D for DB Uploading
-[DefaultDispatcher-worker-15] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating Chr:1D for Line: AGS2000 : 48.770656492sec
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to getVariantData : 4.896018563 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putVariantMappingData: total loaded to variant_mapping table: 4594
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=39174
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1D';
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 4594
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load variants data: 0.446048303 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypeData calling putHaploytpesForGamete
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - Begin putHaplotypesForGamete, number anchorSequences to load: 4385
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypes: starting to commit haplotypes
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaployptes - total count loaded to haplotypes table: 4385
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to load haplotypes : 2.959717853 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: Finished batch, total processed = 4385
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Done DBProcessing Line: ARTHUR Chr: 1D
--------------------------------
-Current Heap Size: [DefaultDispatcher-worker-4] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - 
-Done Processing AGS2020 Adding to the queue for DB Uploading.
-1,284 MB
-Max Available Heap: 54613 MB
--------------------------------
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess - db is setup, init prepared statements, load hash table
-
- beginning - isSqlite is true
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all geneotypes in genotype table=4
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - refRangeRefRangeIDMap is null, creating new one with size : 26508
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadAnchorHash: at end, size of refRangeRefRangeIDMap: 26508, number of rs.next processed: 26508
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all methods in method table=4
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all groups in gamete_groups table=4
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all gametes in gametes table=4
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading readMappingHash, size of all read_mappings in read_mapping table=0
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - DBProcessing Line: AGS2020 Chr: 1D
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Figuring out gamete Group Id for AGS2020 chr:1D
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Writing AGS2020 chr:1D to the DB.
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=39174
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1D';
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 4594
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=39174
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1D';
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 4594
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: time to load allel and variants hash: 0.054495517 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to addToMissingAlleleList: 0.1726119 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: calling putAlleleData with size 314
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putAlleleData: total loaded to alleles table: 314
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:loadAlleleHash: added string NONE to alleles table
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load allele data: 0.098450256 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: second pass, getVariantData
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to getVariantData : 4.948638598 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putVariantMappingData: total loaded to variant_mapping table: 3214
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=42388
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1D';
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 7808
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load variants data: 1.005802305 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypeData calling putHaploytpesForGamete
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - Begin putHaplotypesForGamete, number anchorSequences to load: 4385
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypes: starting to commit haplotypes
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaployptes - total count loaded to haplotypes table: 4385
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to load haplotypes : 2.919709251 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: Finished batch, total processed = 4385
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Done DBProcessing Line: AGS2020 Chr: 1D
--------------------------------
-Current Heap Size: 1,078 MB
-Max Available Heap: 54613 MB
--------------------------------
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess - db is setup, init prepared statements, load hash table
-
- beginning - isSqlite is true
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all geneotypes in genotype table=4
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - refRangeRefRangeIDMap is null, creating new one with size : 26508
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadAnchorHash: at end, size of refRangeRefRangeIDMap: 26508, number of rs.next processed: 26508
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all methods in method table=4
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all groups in gamete_groups table=4
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all gametes in gametes table=4
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading readMappingHash, size of all read_mappings in read_mapping table=0
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - DBProcessing Line: AGS2000 Chr: 1D
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Figuring out gamete Group Id for AGS2000 chr:1D
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Writing AGS2000 chr:1D to the DB.
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=42388
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1D';
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 7808
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=42388
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1D';
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 7808
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: time to load allel and variants hash: 0.097579249 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to addToMissingAlleleList: 0.183347882 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: calling putAlleleData with size 398
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putAlleleData: total loaded to alleles table: 398
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:loadAlleleHash: added string NONE to alleles table
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load allele data: 0.501302857 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: second pass, getVariantData
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all geneotypes in genotype table=4
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - refRangeRefRangeIDMap is null, creating new one with size : 26508
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadAnchorHash: at end, size of refRangeRefRangeIDMap: 26508, number of rs.next processed: 26508
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all methods in method table=4
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all groups in gamete_groups table=4
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all gametes in gametes table=4
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading readMappingHash, size of all read_mappings in read_mapping table=0
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - DBProcessing Line: ARTHUR Chr: 1D
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Figuring out gamete Group Id for ARTHUR chr:1D
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Writing ARTHUR chr:1D to the DB.
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=34580
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1D';
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 0
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=34580
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1D';
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 0
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: time to load allel and variants hash: 3.07895E-4 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to addToMissingAlleleList: 0.17587794 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: calling putAlleleData with size 310
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putAlleleData: total loaded to alleles table: 310
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:loadAlleleHash: added string NONE to alleles table
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load allele data: 0.099701243 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: second pass, getVariantData
 [DefaultDispatcher-worker-12] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - 
+Staging AGS2000 chrom 1D for DB Uploading
+[DefaultDispatcher-worker-12] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Time spent creating Chr:1D for Line: AGS2000 : 47.474258549sec
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to getVariantData : 4.746779781 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putVariantMappingData: total loaded to variant_mapping table: 4594
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=39174
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1D';
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 4594
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load variants data: 0.548279094 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypeData calling putHaploytpesForGamete
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - Begin putHaplotypesForGamete, number anchorSequences to load: 4385
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypes: starting to commit haplotypes
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaployptes - total count loaded to haplotypes table: 4385
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to load haplotypes : 2.801904708 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: Finished batch, total processed = 4385
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Done DBProcessing Line: ARTHUR Chr: 1D
+-------------------------------
+Current Heap Size: 1,285 MB
+Max Available Heap: 54613 MB
+-------------------------------
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess - db is setup, init prepared statements, load hash table
+
+ beginning - isSqlite is true
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all geneotypes in genotype table=4
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - refRangeRefRangeIDMap is null, creating new one with size : 26508
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadAnchorHash: at end, size of refRangeRefRangeIDMap: 26508, number of rs.next processed: 26508
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all methods in method table=4
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all groups in gamete_groups table=4
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all gametes in gametes table=4
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading readMappingHash, size of all read_mappings in read_mapping table=0
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - DBProcessing Line: AGS2020 Chr: 1D
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Figuring out gamete Group Id for AGS2020 chr:1D
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Writing AGS2020 chr:1D to the DB.
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=39174
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1D';
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 4594
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=39174
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1D';
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 4594
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: time to load allel and variants hash: 0.055227186 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to addToMissingAlleleList: 0.178706935 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: calling putAlleleData with size 314
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putAlleleData: total loaded to alleles table: 314
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:loadAlleleHash: added string NONE to alleles table
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load allele data: 0.079310009 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: second pass, getVariantData
+[DefaultDispatcher-worker-4] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - 
+Done Processing AGS2020 Adding to the queue for DB Uploading.
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to getVariantData : 4.881643895 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putVariantMappingData: total loaded to variant_mapping table: 3214
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=42388
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1D';
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 7808
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load variants data: 0.759209302 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypeData calling putHaploytpesForGamete
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - Begin putHaplotypesForGamete, number anchorSequences to load: 4385
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypes: starting to commit haplotypes
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaployptes - total count loaded to haplotypes table: 4385
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to load haplotypes : 3.078338304 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: Finished batch, total processed = 4385
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Done DBProcessing Line: AGS2020 Chr: 1D
+-------------------------------
+Current Heap Size: [DefaultDispatcher-worker-16] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - 
 Done Processing AGS2000 Adding to the queue for DB Uploading.
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to getVariantData : 4.831210247 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putVariantMappingData: total loaded to variant_mapping table: 3606
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=45994
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1D';
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 11414
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load variants data: 0.644681231 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypeData calling putHaploytpesForGamete
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - Begin putHaplotypesForGamete, number anchorSequences to load: 4385
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypes: starting to commit haplotypes
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaployptes - total count loaded to haplotypes table: 4385
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to load haplotypes : 2.898491411 seconds
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: Finished batch, total processed = 4385
-[DefaultDispatcher-worker-10] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Done DBProcessing Line: AGS2000 Chr: 1D
+1,077 MB
+Max Available Heap: 54613 MB
+-------------------------------
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess - db is setup, init prepared statements, load hash table
+
+ beginning - isSqlite is true
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all geneotypes in genotype table=4
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - refRangeRefRangeIDMap is null, creating new one with size : 26508
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadAnchorHash: at end, size of refRangeRefRangeIDMap: 26508, number of rs.next processed: 26508
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all methods in method table=4
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all groups in gamete_groups table=4
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all gametes in gametes table=4
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading readMappingHash, size of all read_mappings in read_mapping table=0
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - DBProcessing Line: AGS2000 Chr: 1D
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Figuring out gamete Group Id for AGS2000 chr:1D
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Writing AGS2000 chr:1D to the DB.
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=42388
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1D';
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 7808
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=42388
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1D';
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 7808
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: time to load allel and variants hash: 0.091360626 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to addToMissingAlleleList: 0.164845989 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: calling putAlleleData with size 398
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putAlleleData: total loaded to alleles table: 398
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:loadAlleleHash: added string NONE to alleles table
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load allele data: 0.122337648 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: second pass, getVariantData
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to getVariantData : 4.594854639 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putVariantMappingData: total loaded to variant_mapping table: 3606
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantMappingHash: before loading hash, size of all variants in variants table=45994
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash query: select variant_id,chrom,position,ref_allele_id, alt_allele_id,anc_id from variants where chrom='1D';
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - loadVariantsHash: size after loading 11414
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to process/load variants data: 0.63151011 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypeData calling putHaploytpesForGamete
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - Begin putHaplotypesForGamete, number anchorSequences to load: 4385
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypes: starting to commit haplotypes
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaployptes - total count loaded to haplotypes table: 4385
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - PHGdbAccess:putHaplotypesData: time to load haplotypes : 3.067285711 seconds
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - putHaplotypesData: Finished batch, total processed = 4385
+[DefaultDispatcher-worker-13] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Done DBProcessing Line: AGS2000 Chr: 1D
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin - Finished writing to the DB.
-[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Finished net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin: time: Mar 2, 2020 22:41:18
-[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin: time: Mar 2, 2020 22:41:18: progress: 100%
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Finished net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin: time: Mar 3, 2020 18:13:33
+[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin: time: Mar 3, 2020 18:13:33: progress: 100%
 [pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - net.maizegenetics.pangenome.db_loading.LoadHaplotypesFromGVCFPlugin  Citation: Bradbury PJ, Zhang Z, Kroon DE, Casstevens TM, Ramdoss Y, Buckler ES. (2007) TASSEL: Software for association mapping of complex traits in diverse samples. Bioinformatics 23:2633-2635.

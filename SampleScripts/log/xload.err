@@ -1,6 +1,4 @@
-[33mWARNING: Non existent mountpoint (directory) in container: '/var/singularity/mnt/final/homes'
-[0m[33mWARNING: Could not chdir to home: /homes/lianggao
-[0m/bin/bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
+/bin/bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
 + OUTPUT_PATH=/tempFileDir/outputDir
 + DATA_PATH=/tempFileDir/data
 + REFERENCE_PATH=/tempFileDir/data/reference

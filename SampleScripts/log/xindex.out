@@ -1,42 +1,19 @@
-+ TEMP_DIR=/tempFileDir
-+ OUTPUT_DIR=/tempFileDir/outputDir
-+ DATA_DIR=/tempFileDir/data
-+ PANGENOME_DIR=/tempFileDir/outputDir/pangenome
-+ '[' '!' -d /tempFileDir/outputDir/pangenome ']'
-+ BASE_HAPLOTYPE_NAME=wheat1ABD_pangenome_fasta
-+ CONFIGFILE=/tempFileDir/data/configSQLite.txt
-+ CONFIGFILE_NAME=configSQLite.txt
-+ HAPLOTYPE_METHOD=CONSENSUS
-+ NUM_BASES_LOADED=4G
-+ MINIMIZER_SIZE=21
-+ WINDOW_SIZE=11
-+ HAPLOTYPE_FASTA=/tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.fa
-+ HAPLOTYPE_INDEX=/tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.mmi
-+ fullXmx=
-++ grep '^Xmx=' /tempFileDir/data/configSQLite.txt
-++ cut -d= -f2
-+ memoryString=60G
-+ [[ 60G != '' ]]
-+ fullXmx=-Xmx60G
-+ [[ -f /tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.fa ]]
-+ echo 'Creating Haplotype Fasta File /tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.fa.'
 Creating Haplotype Fasta File /tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.fa.
-+ /tassel-5-standalone/run_pipeline.pl -Xmx60G -debug -HaplotypeGraphBuilderPlugin -configFile /tempFileDir/data/configSQLite.txt -methods CONSENSUS -includeVariantContexts false -endPlugin -WriteFastaFromGraphPlugin -outputFile /tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.fa -endPlugin
-/tassel-5-standalone/lib/ahocorasick-0.2.4.jar:/tassel-5-standalone/lib/biojava-alignment-4.0.0.jar:/tassel-5-standalone/lib/biojava-core-4.0.0.jar:/tassel-5-standalone/lib/biojava-phylo-4.0.0.jar:/tassel-5-standalone/lib/colt-1.2.0.jar:/tassel-5-standalone/lib/commons-codec-1.10.jar:/tassel-5-standalone/lib/commons-math3-3.4.1.jar:/tassel-5-standalone/lib/ejml-0.23.jar:/tassel-5-standalone/lib/fastutil-8.2.2.jar:/tassel-5-standalone/lib/forester-1.038.jar:/tassel-5-standalone/lib/gs-core-1.3.jar:/tassel-5-standalone/lib/gs-ui-1.3.jar:/tassel-5-standalone/lib/guava-22.0.jar:/tassel-5-standalone/lib/htsjdk-2.19.0.jar:/tassel-5-standalone/lib/itextpdf-5.1.0.jar:/tassel-5-standalone/lib/javax.json-1.0.4.jar:/tassel-5-standalone/lib/jcommon-1.0.23.jar:/tassel-5-standalone/lib/jfreechart-1.0.19.jar:/tassel-5-standalone/lib/jfreesvg-3.2.jar:/tassel-5-standalone/lib/jhdf5-14.12.5.jar:/tassel-5-standalone/lib/json-simple-1.1.1.jar:/tassel-5-standalone/lib/junit-4.10.jar:/tassel-5-standalone/lib/kotlin-stdlib-1.3.50.jar:/tassel-5-standalone/lib/kotlinx-coroutines-core-1.3.0.jar:/tassel-5-standalone/lib/log4j-1.2.13.jar:/tassel-5-standalone/lib/mail-1.4.jar:/tassel-5-standalone/lib/phg.jar:/tassel-5-standalone/lib/postgresql-9.4-1201.jdbc41.jar:/tassel-5-standalone/lib/scala-library-2.10.1.jar:/tassel-5-standalone/lib/slf4j-api-1.7.10.jar:/tassel-5-standalone/lib/slf4j-simple-1.7.10.jar:/tassel-5-standalone/lib/snappy-java-1.1.1.6.jar:/tassel-5-standalone/lib/sqlite-jdbc-3.8.5-pre1.jar:/tassel-5-standalone/lib/trove-3.0.3.jar:/tassel-5-standalone/sTASSEL.jar
+/tassel-5-standalone/lib/jfreesvg-3.2.jar:/tassel-5-standalone/lib/ejml-0.23.jar:/tassel-5-standalone/lib/gs-core-1.3.jar:/tassel-5-standalone/lib/biojava-alignment-4.0.0.jar:/tassel-5-standalone/lib/commons-codec-1.10.jar:/tassel-5-standalone/lib/javax.json-1.0.4.jar:/tassel-5-standalone/lib/kotlinx-coroutines-core-1.3.0.jar:/tassel-5-standalone/lib/fastutil-8.2.2.jar:/tassel-5-standalone/lib/mail-1.4.jar:/tassel-5-standalone/lib/junit-4.10.jar:/tassel-5-standalone/lib/gs-ui-1.3.jar:/tassel-5-standalone/lib/guava-22.0.jar:/tassel-5-standalone/lib/biojava-core-4.0.0.jar:/tassel-5-standalone/lib/biojava-phylo-4.0.0.jar:/tassel-5-standalone/lib/htsjdk-2.19.0.jar:/tassel-5-standalone/lib/sqlite-jdbc-3.8.5-pre1.jar:/tassel-5-standalone/lib/itextpdf-5.1.0.jar:/tassel-5-standalone/lib/phg.jar:/tassel-5-standalone/lib/scala-library-2.10.1.jar:/tassel-5-standalone/lib/jcommon-1.0.23.jar:/tassel-5-standalone/lib/kotlin-stdlib-1.3.50.jar:/tassel-5-standalone/lib/jfreechart-1.0.19.jar:/tassel-5-standalone/lib/json-simple-1.1.1.jar:/tassel-5-standalone/lib/jhdf5-14.12.5.jar:/tassel-5-standalone/lib/slf4j-simple-1.7.10.jar:/tassel-5-standalone/lib/colt-1.2.0.jar:/tassel-5-standalone/lib/log4j-1.2.13.jar:/tassel-5-standalone/lib/forester-1.038.jar:/tassel-5-standalone/lib/commons-math3-3.4.1.jar:/tassel-5-standalone/lib/slf4j-api-1.7.10.jar:/tassel-5-standalone/lib/postgresql-9.4-1201.jdbc41.jar:/tassel-5-standalone/lib/ahocorasick-0.2.4.jar:/tassel-5-standalone/lib/snappy-java-1.1.1.6.jar:/tassel-5-standalone/lib/trove-3.0.3.jar:/tassel-5-standalone/sTASSEL.jar
 Memory Settings: -Xms512m -Xmx60G
-Tassel Pipeline Arguments: -debug -HaplotypeGraphBuilderPlugin -configFile /tempFileDir/data/configSQLite.txt -methods CONSENSUS -includeVariantContexts false -endPlugin -WriteFastaFromGraphPlugin -outputFile /tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.fa -endPlugin
+Tassel Pipeline Arguments: -debug -HaplotypeGraphBuilderPlugin -configFile /tempFileDir/data/config.txt -methods CONSENSUS -includeVariantContexts false -endPlugin -WriteFastaFromGraphPlugin -outputFile /tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.fa -endPlugin
 [main] INFO net.maizegenetics.tassel.TasselLogging - Tassel Version: 5.2.60  Date: February 20, 2020
 [main] INFO net.maizegenetics.tassel.TasselLogging - Max Available Memory Reported by JVM: 54613 MB
 [main] INFO net.maizegenetics.tassel.TasselLogging - Java Version: 1.8.0_191
 [main] INFO net.maizegenetics.tassel.TasselLogging - OS: Linux
-[main] INFO net.maizegenetics.tassel.TasselLogging - Number of Processors: 112
-[main] INFO net.maizegenetics.pipeline.TasselPipeline - Tassel Pipeline Arguments: [-fork1, -HaplotypeGraphBuilderPlugin, -configFile, /tempFileDir/data/configSQLite.txt, -methods, CONSENSUS, -includeVariantContexts, false, -endPlugin, -WriteFastaFromGraphPlugin, -outputFile, /tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.fa, -endPlugin, -runfork1]
+[main] INFO net.maizegenetics.tassel.TasselLogging - Number of Processors: 16
+[main] INFO net.maizegenetics.pipeline.TasselPipeline - Tassel Pipeline Arguments: [-fork1, -HaplotypeGraphBuilderPlugin, -configFile, /tempFileDir/data/config.txt, -methods, CONSENSUS, -includeVariantContexts, false, -endPlugin, -WriteFastaFromGraphPlugin, -outputFile, /tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.fa, -endPlugin, -runfork1]
 net.maizegenetics.pangenome.api.HaplotypeGraphBuilderPlugin
    net.maizegenetics.pangenome.api.WriteFastaFromGraphPlugin
-[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.pangenome.api.HaplotypeGraphBuilderPlugin: time: Feb 28, 2020 16:18:56
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.pangenome.api.HaplotypeGraphBuilderPlugin: time: Mar 3, 2020 18:44:8
 [pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - 
 HaplotypeGraphBuilderPlugin Parameters
-configFile: /tempFileDir/data/configSQLite.txt
+configFile: /tempFileDir/data/config.txt
 methods: CONSENSUS
 includeSequences: true
 includeVariantContexts: false
@@ -50,44 +27,25 @@ chromosomes: null
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - referenceRangesAsMap: query statement: select reference_ranges.ref_range_id, chrom, range_start, range_end, methods.name from reference_ranges  INNER JOIN ref_range_ref_range_method on ref_range_ref_range_method.ref_range_id=reference_ranges.ref_range_id  INNER JOIN methods on ref_range_ref_range_method.method_id = methods.method_id  AND methods.method_type = 7 ORDER BY reference_ranges.ref_range_id
 methods size: 1
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - referenceRangesAsMap: number of reference ranges: 26508
-[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - referenceRangesAsMap: time: 0.252334231 secs.
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - referenceRangesAsMap: time: 0.395559535 secs.
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - taxaListMap: query statement: SELECT gamete_haplotypes.gamete_grp_id, genotypes.line_name FROM gamete_haplotypes INNER JOIN gametes ON gamete_haplotypes.gameteid = gametes.gameteid INNER JOIN genotypes on gametes.genoid = genotypes.genoid ORDER BY gamete_haplotypes.gamete_grp_id;
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - taxaListMap: number of taxa lists: 8
-[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - taxaListMap: time: 0.005000695 secs.
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - taxaListMap: time: 0.01014814 secs.
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createHaplotypeNodes: haplotype method: CONSENSUS range group method: null
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createHaplotypeNodes: query statement: SELECT haplotypes_id, gamete_grp_id, haplotypes.ref_range_id, sequence, seq_hash, seq_len FROM haplotypes WHERE method_id = 5;
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - addNodes: number of nodes: 14305
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - addNodes: number of reference ranges: 13253
-[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createHaplotypeNodes: time: 0.199939517 secs.
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createHaplotypeNodes: time: 0.577053664 secs.
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.api.HaplotypeGraph - Created graph edges: created when requested  number of nodes: 14305  number of reference ranges: 13253
-[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Finished net.maizegenetics.pangenome.api.HaplotypeGraphBuilderPlugin: time: Feb 28, 2020 16:18:57
-[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.pangenome.api.WriteFastaFromGraphPlugin: time: Feb 28, 2020 16:18:57
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Finished net.maizegenetics.pangenome.api.HaplotypeGraphBuilderPlugin: time: Mar 3, 2020 18:44:10
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.pangenome.api.WriteFastaFromGraphPlugin: time: Mar 3, 2020 18:44:10
 [pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - 
 WriteFastaFromGraphPlugin Parameters
 outputFile: /tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.fa
 
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.api.GraphIO - writeFasta: wrote file: /tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.fa
-[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Finished net.maizegenetics.pangenome.api.WriteFastaFromGraphPlugin: time: Feb 28, 2020 16:18:58
-[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.api.WriteFastaFromGraphPlugin: time: Feb 28, 2020 16:18:58: progress: 100%
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Finished net.maizegenetics.pangenome.api.WriteFastaFromGraphPlugin: time: Mar 3, 2020 18:44:11
+[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.api.WriteFastaFromGraphPlugin: time: Mar 3, 2020 18:44:11: progress: 100%
 [pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - net.maizegenetics.pangenome.api.WriteFastaFromGraphPlugin  Citation: Bradbury PJ, Zhang Z, Kroon DE, Casstevens TM, Ramdoss Y, Buckler ES. (2007) TASSEL: Software for association mapping of complex traits in diverse samples. Bioinformatics 23:2633-2635.
-[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.api.HaplotypeGraphBuilderPlugin: time: Feb 28, 2020 16:18:58: progress: 100%
-
-real	0m2.539s
-user	0m6.516s
-sys	0m1.258s
-+ [[ -f /tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.mmi ]]
-+ echo 'Creating Minimap2 Index for /tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.fa.'
+[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.api.HaplotypeGraphBuilderPlugin: time: Mar 3, 2020 18:44:11: progress: 100%
 Creating Minimap2 Index for /tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.fa.
-+ /minimap2/minimap2 -d /tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.mmi -k 21 -I 4G -w 11 /tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.fa
-[M::mm_idx_gen::1.940*1.01] collected minimizers
-[M::mm_idx_gen::2.225*1.26] sorted minimizers
-[M::main::2.585*1.22] loaded/built the index for 14305 target sequence(s)
-[M::mm_idx_stat] kmer size: 21; skip: 11; is_hpc: 0; #seq: 14305
-[M::mm_idx_stat::2.659*1.22] distinct minimizers: 5802329 (72.71% are singletons); average occurrences: 1.419; average spacing: 6.120; total length: 50399943
-[M::main] Version: 2.17-r974-dirty
-[M::main] CMD: /minimap2/minimap2 -d /tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.mmi -k 21 -I 4G -w 11 /tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.fa
-[M::main] Real time: 2.692 sec; CPU: 3.265 sec; Peak RSS: 0.334 GB
-
-real	0m2.736s
-user	0m2.716s
-sys	0m0.588s
