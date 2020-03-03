@@ -1,30 +1,16 @@
-+ TEMP_DIR=/tempFileDir
-+ OUTPUT_DIR=/tempFileDir/outputDir
-+ DATA_DIR=/tempFileDir/data
-+ DATABASE_CONFIG=/tempFileDir/data/configSQLite.txt
-+ CONSENSUS_METHOD=CONSENSUS
-+ OUTPUT_FILE=/tempFileDir/outputDir/testOutput1.vcf
-+ PATH_METHOD_NAME=PATH_METHOD2
-+ fullXmx=
-++ cut -d= -f2
-++ grep '^Xmx=' /tempFileDir/data/configSQLite.txt
-+ memoryString=60G
-+ '[' 60G '!=' '' ']'
-+ fullXmx=-Xmx60G
-+ /tassel-5-standalone/run_pipeline.pl -Xmx60G -debug -configParameters /tempFileDir/data/configSQLite.txt -HaplotypeGraphBuilderPlugin -configFile /tempFileDir/data/configSQLite.txt -methods CONSENSUS -includeVariantContexts true -endPlugin -ImportHaplotypePathFilePlugin -pathMethodName PATH_METHOD2 -endPlugin -PathsToVCFPlugin -outputFile /tempFileDir/outputDir/testOutput1.vcf -endPlugin
-/tassel-5-standalone/lib/ahocorasick-0.2.4.jar:/tassel-5-standalone/lib/biojava-alignment-4.0.0.jar:/tassel-5-standalone/lib/biojava-core-4.0.0.jar:/tassel-5-standalone/lib/biojava-phylo-4.0.0.jar:/tassel-5-standalone/lib/colt-1.2.0.jar:/tassel-5-standalone/lib/commons-codec-1.10.jar:/tassel-5-standalone/lib/commons-math3-3.4.1.jar:/tassel-5-standalone/lib/ejml-0.23.jar:/tassel-5-standalone/lib/fastutil-8.2.2.jar:/tassel-5-standalone/lib/forester-1.038.jar:/tassel-5-standalone/lib/gs-core-1.3.jar:/tassel-5-standalone/lib/gs-ui-1.3.jar:/tassel-5-standalone/lib/guava-22.0.jar:/tassel-5-standalone/lib/htsjdk-2.19.0.jar:/tassel-5-standalone/lib/itextpdf-5.1.0.jar:/tassel-5-standalone/lib/javax.json-1.0.4.jar:/tassel-5-standalone/lib/jcommon-1.0.23.jar:/tassel-5-standalone/lib/jfreechart-1.0.19.jar:/tassel-5-standalone/lib/jfreesvg-3.2.jar:/tassel-5-standalone/lib/jhdf5-14.12.5.jar:/tassel-5-standalone/lib/json-simple-1.1.1.jar:/tassel-5-standalone/lib/junit-4.10.jar:/tassel-5-standalone/lib/kotlin-stdlib-1.3.50.jar:/tassel-5-standalone/lib/kotlinx-coroutines-core-1.3.0.jar:/tassel-5-standalone/lib/log4j-1.2.13.jar:/tassel-5-standalone/lib/mail-1.4.jar:/tassel-5-standalone/lib/phg.jar:/tassel-5-standalone/lib/postgresql-9.4-1201.jdbc41.jar:/tassel-5-standalone/lib/scala-library-2.10.1.jar:/tassel-5-standalone/lib/slf4j-api-1.7.10.jar:/tassel-5-standalone/lib/slf4j-simple-1.7.10.jar:/tassel-5-standalone/lib/snappy-java-1.1.1.6.jar:/tassel-5-standalone/lib/sqlite-jdbc-3.8.5-pre1.jar:/tassel-5-standalone/lib/trove-3.0.3.jar:/tassel-5-standalone/sTASSEL.jar
+/tassel-5-standalone/lib/jfreesvg-3.2.jar:/tassel-5-standalone/lib/ejml-0.23.jar:/tassel-5-standalone/lib/gs-core-1.3.jar:/tassel-5-standalone/lib/biojava-alignment-4.0.0.jar:/tassel-5-standalone/lib/commons-codec-1.10.jar:/tassel-5-standalone/lib/javax.json-1.0.4.jar:/tassel-5-standalone/lib/kotlinx-coroutines-core-1.3.0.jar:/tassel-5-standalone/lib/fastutil-8.2.2.jar:/tassel-5-standalone/lib/mail-1.4.jar:/tassel-5-standalone/lib/junit-4.10.jar:/tassel-5-standalone/lib/gs-ui-1.3.jar:/tassel-5-standalone/lib/guava-22.0.jar:/tassel-5-standalone/lib/biojava-core-4.0.0.jar:/tassel-5-standalone/lib/biojava-phylo-4.0.0.jar:/tassel-5-standalone/lib/htsjdk-2.19.0.jar:/tassel-5-standalone/lib/sqlite-jdbc-3.8.5-pre1.jar:/tassel-5-standalone/lib/itextpdf-5.1.0.jar:/tassel-5-standalone/lib/phg.jar:/tassel-5-standalone/lib/scala-library-2.10.1.jar:/tassel-5-standalone/lib/jcommon-1.0.23.jar:/tassel-5-standalone/lib/kotlin-stdlib-1.3.50.jar:/tassel-5-standalone/lib/jfreechart-1.0.19.jar:/tassel-5-standalone/lib/json-simple-1.1.1.jar:/tassel-5-standalone/lib/jhdf5-14.12.5.jar:/tassel-5-standalone/lib/slf4j-simple-1.7.10.jar:/tassel-5-standalone/lib/colt-1.2.0.jar:/tassel-5-standalone/lib/log4j-1.2.13.jar:/tassel-5-standalone/lib/forester-1.038.jar:/tassel-5-standalone/lib/commons-math3-3.4.1.jar:/tassel-5-standalone/lib/slf4j-api-1.7.10.jar:/tassel-5-standalone/lib/postgresql-9.4-1201.jdbc41.jar:/tassel-5-standalone/lib/ahocorasick-0.2.4.jar:/tassel-5-standalone/lib/snappy-java-1.1.1.6.jar:/tassel-5-standalone/lib/trove-3.0.3.jar:/tassel-5-standalone/sTASSEL.jar
 Memory Settings: -Xms512m -Xmx60G
-Tassel Pipeline Arguments: -debug -configParameters /tempFileDir/data/configSQLite.txt -HaplotypeGraphBuilderPlugin -configFile /tempFileDir/data/configSQLite.txt -methods CONSENSUS -includeVariantContexts true -endPlugin -ImportHaplotypePathFilePlugin -pathMethodName PATH_METHOD2 -endPlugin -PathsToVCFPlugin -outputFile /tempFileDir/outputDir/testOutput1.vcf -endPlugin
-[main] INFO net.maizegenetics.plugindef.ParameterCache - load: loading parameter cache with: /tempFileDir/data/configSQLite.txt
+Tassel Pipeline Arguments: -debug -configParameters /tempFileDir/data/config.txt -HaplotypeGraphBuilderPlugin -configFile /tempFileDir/data/config.txt -methods CONSENSUS -includeVariantContexts true -endPlugin -ImportHaplotypePathFilePlugin -pathMethodName PATH_METHOD2 -endPlugin -PathsToVCFPlugin -outputFile /tempFileDir/outputDir/testOutput1.vcf -endPlugin
+[main] INFO net.maizegenetics.plugindef.ParameterCache - load: loading parameter cache with: /tempFileDir/data/config.txt
 [main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: password value: sqlite
-[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: LoadHaplotypesFromGVCFPlugin.referenceFasta value: /tempFileDir/data/reference/wheat_chr1A1B1D.fa
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: LoadHaplotypesFromGVCFPlugin.referenceFasta value: /tempFileDir/data/reference/reference.fa
 [main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: LoadHaplotypesFromGVCFPlugin.haplotypeMethodDescription value: "groovy from gvcf"
 [main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: numThreads value: 10
-[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: LoadHaplotypesFromGVCFPlugin.gvcfDir value: /tempFileDir/data/outputs/gvcfs/
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: LoadHaplotypesFromGVCFPlugin.gvcfDir value: /tempFileDir/data/gvcfs/
 [main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: Xmx value: 60G
 [main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: extendedWindowSize value: 1000
 [main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: minTransitionProb value: 0.001
-[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: referenceFasta value: /tempFileDir/data/reference/wheat_chr1A1B1D.fa
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: referenceFasta value: /tempFileDir/data/reference/reference.fa
 [main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: LoadHaplotypesFromGVCFPlugin.haplotypeMethodName value: HAPLOTYPES_METHOD
 [main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: minReads value: 0
 [main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: host value: localHost
@@ -33,10 +19,10 @@ Tassel Pipeline Arguments: -debug -configParameters /tempFileDir/data/configSQLi
 [main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: probCorrect value: 0.99
 [main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: BestHaplotypePathPlugin.minTaxa value: 1
 [main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: DB value: /tempFileDir/outputDir/group3_wheat1A1B1D.db
-[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: configFile value: /tempFileDir/data/configSQLite.txt
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: configFile value: /tempFileDir/data/config.txt
 [main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: maxReads value: 100
 [main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: maxNodes value: 30
-[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: LoadHaplotypesFromGVCFPlugin.keyFile value: /tempFileDir/data/asub_gvcf_keyfile.txt
+[main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: LoadHaplotypesFromGVCFPlugin.keyFile value: /tempFileDir/data/keyfile.txt
 [main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: maxError value: 0.2
 [main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: assemblyEntryPoint value: all
 [main] INFO net.maizegenetics.plugindef.ParameterCache - ParameterCache: key: mxDiv value: .001
@@ -45,15 +31,15 @@ Tassel Pipeline Arguments: -debug -configParameters /tempFileDir/data/configSQLi
 [main] INFO net.maizegenetics.tassel.TasselLogging - Max Available Memory Reported by JVM: 54613 MB
 [main] INFO net.maizegenetics.tassel.TasselLogging - Java Version: 1.8.0_191
 [main] INFO net.maizegenetics.tassel.TasselLogging - OS: Linux
-[main] INFO net.maizegenetics.tassel.TasselLogging - Number of Processors: 112
-[main] INFO net.maizegenetics.pipeline.TasselPipeline - Tassel Pipeline Arguments: [-fork1, -HaplotypeGraphBuilderPlugin, -configFile, /tempFileDir/data/configSQLite.txt, -methods, CONSENSUS, -includeVariantContexts, true, -endPlugin, -ImportHaplotypePathFilePlugin, -pathMethodName, PATH_METHOD2, -endPlugin, -PathsToVCFPlugin, -outputFile, /tempFileDir/outputDir/testOutput1.vcf, -endPlugin, -runfork1]
+[main] INFO net.maizegenetics.tassel.TasselLogging - Number of Processors: 16
+[main] INFO net.maizegenetics.pipeline.TasselPipeline - Tassel Pipeline Arguments: [-fork1, -HaplotypeGraphBuilderPlugin, -configFile, /tempFileDir/data/config.txt, -methods, CONSENSUS, -includeVariantContexts, true, -endPlugin, -ImportHaplotypePathFilePlugin, -pathMethodName, PATH_METHOD2, -endPlugin, -PathsToVCFPlugin, -outputFile, /tempFileDir/outputDir/testOutput1.vcf, -endPlugin, -runfork1]
 net.maizegenetics.pangenome.api.HaplotypeGraphBuilderPlugin
    net.maizegenetics.pangenome.hapCalling.ImportHaplotypePathFilePlugin
       net.maizegenetics.pangenome.hapCalling.PathsToVCFPlugin
-[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.pangenome.api.HaplotypeGraphBuilderPlugin: time: Feb 28, 2020 16:22:22
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.pangenome.api.HaplotypeGraphBuilderPlugin: time: Mar 3, 2020 19:26:52
 [pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - 
 HaplotypeGraphBuilderPlugin Parameters
-configFile: /tempFileDir/data/configSQLite.txt
+configFile: /tempFileDir/data/config.txt
 methods: CONSENSUS
 includeSequences: true
 includeVariantContexts: true
@@ -67,18 +53,18 @@ chromosomes: null
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - referenceRangesAsMap: query statement: select reference_ranges.ref_range_id, chrom, range_start, range_end, methods.name from reference_ranges  INNER JOIN ref_range_ref_range_method on ref_range_ref_range_method.ref_range_id=reference_ranges.ref_range_id  INNER JOIN methods on ref_range_ref_range_method.method_id = methods.method_id  AND methods.method_type = 7 ORDER BY reference_ranges.ref_range_id
 methods size: 1
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - referenceRangesAsMap: number of reference ranges: 26508
-[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - referenceRangesAsMap: time: 0.208771381 secs.
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - referenceRangesAsMap: time: 0.33519788 secs.
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - taxaListMap: query statement: SELECT gamete_haplotypes.gamete_grp_id, genotypes.line_name FROM gamete_haplotypes INNER JOIN gametes ON gamete_haplotypes.gameteid = gametes.gameteid INNER JOIN genotypes on gametes.genoid = genotypes.genoid ORDER BY gamete_haplotypes.gamete_grp_id;
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - taxaListMap: number of taxa lists: 8
-[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - taxaListMap: time: 0.004912818 secs.
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - taxaListMap: time: 0.013474141 secs.
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createHaplotypeNodes: haplotype method: CONSENSUS range group method: null
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createHaplotypeNodes: query statement: SELECT haplotypes_id, gamete_grp_id, haplotypes.ref_range_id, sequence, seq_hash, seq_len, variant_list FROM haplotypes WHERE method_id = 5;
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - addNodes: number of nodes: 14305
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - addNodes: number of reference ranges: 13253
-[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createHaplotypeNodes: time: 0.307789644 secs.
+[pool-1-thread-1] INFO net.maizegenetics.pangenome.api.CreateGraphUtils - createHaplotypeNodes: time: 0.620860251 secs.
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.api.HaplotypeGraph - Created graph edges: created when requested  number of nodes: 14305  number of reference ranges: 13253
-[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Finished net.maizegenetics.pangenome.api.HaplotypeGraphBuilderPlugin: time: Feb 28, 2020 16:22:24
-[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.pangenome.hapCalling.ImportHaplotypePathFilePlugin: time: Feb 28, 2020 16:22:24
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Finished net.maizegenetics.pangenome.api.HaplotypeGraphBuilderPlugin: time: Mar 3, 2020 19:27:25
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.pangenome.hapCalling.ImportHaplotypePathFilePlugin: time: Mar 3, 2020 19:27:25
 [pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - 
 ImportHaplotypePathFilePlugin Parameters
 inputFileDirectory: null
@@ -99,8 +85,8 @@ pathMethodName: PATH_METHOD2
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading hash, size of all gametes in gametes table=4
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.db_loading.PHGdbAccess - before loading readMappingHash, size of all read_mappings in read_mapping table=3
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.ImportHaplotypePathFilePlugin - Done loading readMappings from the DB.
-[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Finished net.maizegenetics.pangenome.hapCalling.ImportHaplotypePathFilePlugin: time: Feb 28, 2020 16:22:24
-[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.pangenome.hapCalling.PathsToVCFPlugin: time: Feb 28, 2020 16:22:24
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Finished net.maizegenetics.pangenome.hapCalling.ImportHaplotypePathFilePlugin: time: Mar 3, 2020 19:27:25
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.pangenome.hapCalling.PathsToVCFPlugin: time: Mar 3, 2020 19:27:25
 [pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - 
 PathsToVCFPlugin Parameters
 outputFile: /tempFileDir/outputDir/testOutput1.vcf
@@ -112,22 +98,18 @@ outputAllSNPs: true
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.PathsToVCFPlugin - processData: number of taxa: 3
 [pool-1-thread-1] DEBUG net.maizegenetics.pangenome.hapCalling.PathsToVCFPlugin - Number of SNP positions found in the graph:17848
 [pool-1-thread-1] INFO net.maizegenetics.pangenome.hapCalling.PathsToVCFPlugin - processData: number of positions: 17848
-[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.hapCalling.PathsToVCFPlugin: time: Feb 28, 2020 16:22:30: progress: 0%
-[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.hapCalling.PathsToVCFPlugin: time: Feb 28, 2020 16:22:30: progress: 10%
-[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.hapCalling.PathsToVCFPlugin: time: Feb 28, 2020 16:22:30: progress: 20%
-[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.hapCalling.PathsToVCFPlugin: time: Feb 28, 2020 16:22:30: progress: 30%
-[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.hapCalling.PathsToVCFPlugin: time: Feb 28, 2020 16:22:30: progress: 40%
-[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.hapCalling.PathsToVCFPlugin: time: Feb 28, 2020 16:22:30: progress: 50%
-[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.hapCalling.PathsToVCFPlugin: time: Feb 28, 2020 16:22:30: progress: 60%
-[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.hapCalling.PathsToVCFPlugin: time: Feb 28, 2020 16:22:30: progress: 70%
-[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.hapCalling.PathsToVCFPlugin: time: Feb 28, 2020 16:22:30: progress: 80%
-[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.hapCalling.PathsToVCFPlugin: time: Feb 28, 2020 16:22:30: progress: 90%
-[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.hapCalling.PathsToVCFPlugin: time: Feb 28, 2020 16:22:30: progress: 100%
+[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.hapCalling.PathsToVCFPlugin: time: Mar 3, 2020 19:27:34: progress: 0%
+[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.hapCalling.PathsToVCFPlugin: time: Mar 3, 2020 19:27:34: progress: 10%
+[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.hapCalling.PathsToVCFPlugin: time: Mar 3, 2020 19:27:34: progress: 20%
+[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.hapCalling.PathsToVCFPlugin: time: Mar 3, 2020 19:27:34: progress: 30%
+[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.hapCalling.PathsToVCFPlugin: time: Mar 3, 2020 19:27:34: progress: 40%
+[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.hapCalling.PathsToVCFPlugin: time: Mar 3, 2020 19:27:34: progress: 50%
+[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.hapCalling.PathsToVCFPlugin: time: Mar 3, 2020 19:27:34: progress: 60%
+[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.hapCalling.PathsToVCFPlugin: time: Mar 3, 2020 19:27:34: progress: 70%
+[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.hapCalling.PathsToVCFPlugin: time: Mar 3, 2020 19:27:34: progress: 80%
+[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.hapCalling.PathsToVCFPlugin: time: Mar 3, 2020 19:27:34: progress: 90%
+[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.hapCalling.PathsToVCFPlugin: time: Mar 3, 2020 19:27:34: progress: 100%
 [pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - net.maizegenetics.pangenome.hapCalling.PathsToVCFPlugin  Citation: Bradbury PJ, Zhang Z, Kroon DE, Casstevens TM, Ramdoss Y, Buckler ES. (2007) TASSEL: Software for association mapping of complex traits in diverse samples. Bioinformatics 23:2633-2635.
-[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Finished net.maizegenetics.pangenome.hapCalling.PathsToVCFPlugin: time: Feb 28, 2020 16:22:30
-[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.hapCalling.ImportHaplotypePathFilePlugin: time: Feb 28, 2020 16:22:30: progress: 100%
-[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.api.HaplotypeGraphBuilderPlugin: time: Feb 28, 2020 16:22:30: progress: 100%
-
-real	0m9.752s
-user	0m24.451s
-sys	0m6.669s
+[pool-1-thread-1] INFO net.maizegenetics.plugindef.AbstractPlugin - Finished net.maizegenetics.pangenome.hapCalling.PathsToVCFPlugin: time: Mar 3, 2020 19:27:34
+[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.hapCalling.ImportHaplotypePathFilePlugin: time: Mar 3, 2020 19:27:34: progress: 100%
+[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.pangenome.api.HaplotypeGraphBuilderPlugin: time: Mar 3, 2020 19:27:34: progress: 100%

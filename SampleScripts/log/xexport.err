@@ -1,0 +1,27 @@
+/bin/bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
++ TEMP_DIR=/tempFileDir
++ OUTPUT_DIR=/tempFileDir/outputDir
++ DATA_DIR=/tempFileDir/data
++ DATABASE_CONFIG=/tempFileDir/data/config.txt
++ CONSENSUS_METHOD=CONSENSUS
++ OUTPUT_FILE=/tempFileDir/outputDir/testOutput1.vcf
++ PATH_METHOD_NAME=PATH_METHOD2
++ fullXmx=
+++ grep '^Xmx=' /tempFileDir/data/config.txt
+++ cut -d= -f2
++ memoryString=60G
++ '[' 60G '!=' '' ']'
++ fullXmx=-Xmx60G
++ /tassel-5-standalone/run_pipeline.pl -Xmx60G -debug -configParameters /tempFileDir/data/config.txt -HaplotypeGraphBuilderPlugin -configFile /tempFileDir/data/config.txt -methods CONSENSUS -includeVariantContexts true -endPlugin -ImportHaplotypePathFilePlugin -pathMethodName PATH_METHOD2 -endPlugin -PathsToVCFPlugin -outputFile /tempFileDir/outputDir/testOutput1.vcf -endPlugin
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "en_US.UTF-8",
+	LC_CTYPE = "en_US.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+
+real	0m43.923s
+user	0m35.025s
+sys	0m6.193s

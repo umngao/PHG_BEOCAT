@@ -1,0 +1,96 @@
+/bin/bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
++ TEMP_DIR=/tempFileDir
++ OUTPUT_DIR=/tempFileDir/outputDir/
++ DATA_DIR=/tempFileDir/data
++ REFERENCE_DIR=/tempFileDir/data/reference
++ FASTQ_DIR=/tempFileDir/data/fastq
++ PANGENOME_DIR=/tempFileDir/outputDir//pangenome
++ FASTQ_HAP_COUNT_DIR=/tempFileDir/outputDir//fastq_hap_count/
++ '[' '!' -d /tempFileDir/outputDir//fastq_hap_count/ ']'
++ HAP_COUNT_BEST_PATH_DIR=/tempFileDir/outputDir//hap_count_best_path
++ '[' '!' -d /tempFileDir/outputDir//hap_count_best_path ']'
++ '[' '!' -d /tempFileDir/outputDir//pangenome ']'
++ BASE_HAPLOTYPE_NAME=wheat1ABD_pangenome_fasta
++ CONFIGFILE=/tempFileDir/data/config.txt
++ CONFIGFILE_NAME=config.txt
++ HAPLOTYPE_METHOD=CONSENSUS
++ HAPLOTYPE_METHOD_FIND_PATH=CONSENSUS,refRegionGroup
++ HAP_COUNT_METHOD=HAP_COUNT_METHOD
++ PATH_METHOD=PATH_METHOD2
++ KEY_FILE=/tempFileDir/data/fastq/key.txt
++ PATH_KEY_FILE=/tempFileDir/data/fastq/key_pathKeyFile.txt
++ REF_RANGE_FILE=
++ '[' '!' -z '' ']'
++ HAPLOTYPE_FASTA=/tempFileDir/outputDir//pangenome/wheat1ABD_pangenome_fasta.fa
++ HAPLOTYPE_INDEX=/tempFileDir/outputDir//pangenome/wheat1ABD_pangenome_fasta.mmi
++ fullXmx=
+++ grep '^Xmx=' /tempFileDir/data/config.txt
+++ cut -d= -f2
++ memoryString=60G
++ '[' 60G '!=' '' ']'
++ fullXmx=-Xmx60G
++ TAXA_LIST_FLAG=
+++ grep '^filterTaxaList=' /tempFileDir/data/config.txt
+++ cut -d= -f2
++ filterTaxaList=
++ '[' '!=' '' ']'
+/FindPathMinimap2.sh: line 71: [: !=: unary operator expected
++ REF_RANGE_FILE_FLAG=
++ '[' '!' -z '' ']'
++ /tassel-5-standalone/run_pipeline.pl -debug -Xmx60G -configParameters /tempFileDir/data/config.txt -HaplotypeGraphBuilderPlugin -configFile /tempFileDir/data/config.txt -methods CONSENSUS -includeVariantContexts false -includeSequences false -endPlugin -FastqToMappingPlugin -minimap2IndexFile /tempFileDir/outputDir//pangenome/wheat1ABD_pangenome_fasta.mmi -keyFile /tempFileDir/data/fastq/key.txt -fastqDir /tempFileDir/data/fastq/ -methodName HAP_COUNT_METHOD -methodDescription READ_MAPPING_DESCRIPTION -debugDir /tempFileDir/outputDir/ -endPlugin
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "en_US.UTF-8",
+	LC_CTYPE = "en_US.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+[M::main::0.555*1.00] loaded/built the index for 14305 target sequence(s)
+[M::mm_mapopt_update::0.555*1.00] mid_occ = 1000
+[M::mm_idx_stat] kmer size: 21; skip: 11; is_hpc: 0; #seq: 14305
+[M::mm_idx_stat::0.640*1.00] distinct minimizers: 5802329 (72.71% are singletons); average occurrences: 1.419; average spacing: 6.120; total length: 50399943
+[M::worker_pipeline::11.468*2.43] mapped 574713 sequences
+[M::worker_pipeline::15.628*1.84] mapped 574713 sequences
+[M::worker_pipeline::17.218*1.68] mapped 130164 sequences
+[M::main] Version: 2.17-r974-dirty
+[M::main] CMD: minimap2 -ax sr -t 14 --secondary=yes -N20 --eqx /tempFileDir/outputDir//pangenome/wheat1ABD_pangenome_fasta.mmi /tempFileDir/data/fastq/AC_Avonlea.fq.gz
+[M::main] Real time: 17.251 sec; CPU: 28.900 sec; Peak RSS: 0.680 GB
+[M::main::0.623*1.00] loaded/built the index for 14305 target sequence(s)
+[M::mm_mapopt_update::0.623*1.00] mid_occ = 1000
+[M::mm_idx_stat] kmer size: 21; skip: 11; is_hpc: 0; #seq: 14305
+[M::mm_idx_stat::0.717*1.00] distinct minimizers: 5802329 (72.71% are singletons); average occurrences: 1.419; average spacing: 6.120; total length: 50399943
+[M::worker_pipeline::9.456*2.92] mapped 574713 sequences
+[M::worker_pipeline::12.787*2.22] mapped 574713 sequences
+[M::worker_pipeline::14.614*1.96] mapped 152130 sequences
+[M::main] Version: 2.17-r974-dirty
+[M::main] CMD: minimap2 -ax sr -t 14 --secondary=yes -N20 --eqx /tempFileDir/outputDir//pangenome/wheat1ABD_pangenome_fasta.mmi /tempFileDir/data/fastq/Buteo.fq.gz
+[M::main] Real time: 14.636 sec; CPU: 28.639 sec; Peak RSS: 2.097 GB
+[M::main::0.618*1.00] loaded/built the index for 14305 target sequence(s)
+[M::mm_mapopt_update::0.619*1.00] mid_occ = 1000
+[M::mm_idx_stat] kmer size: 21; skip: 11; is_hpc: 0; #seq: 14305
+[M::mm_idx_stat::0.706*1.00] distinct minimizers: 5802329 (72.71% are singletons); average occurrences: 1.419; average spacing: 6.120; total length: 50399943
+[M::worker_pipeline::9.074*2.77] mapped 549451 sequences
+[M::worker_pipeline::13.371*3.11] mapped 549451 sequences
+[M::worker_pipeline::16.676*2.54] mapped 549451 sequences
+[M::worker_pipeline::19.838*2.16] mapped 363089 sequences
+[M::main] Version: 2.17-r974-dirty
+[M::main] CMD: minimap2 -ax sr -t 14 --secondary=yes -N20 --eqx /tempFileDir/outputDir//pangenome/wheat1ABD_pangenome_fasta.mmi /tempFileDir/data/fastq/CDC_Rama.fq.gz
+[M::main] Real time: 19.872 sec; CPU: 42.978 sec; Peak RSS: 3.084 GB
+
+real	0m57.295s
+user	2m14.655s
+sys	0m14.601s
++ /tassel-5-standalone/run_pipeline.pl -debug -Xmx60G -configParameters /tempFileDir/data/config.txt -HaplotypeGraphBuilderPlugin -configFile /tempFileDir/data/config.txt -methods CONSENSUS,refRegionGroup -includeVariantContexts false -includeSequences false -endPlugin -BestHaplotypePathPlugin -keyFile /tempFileDir/data/fastq/key_pathKeyFile.txt -outDir /tempFileDir/outputDir//hap_count_best_path -readMethod HAP_COUNT_METHOD -pathMethod PATH_METHOD2 -endPlugin
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "en_US.UTF-8",
+	LC_CTYPE = "en_US.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+
+real	0m6.562s
+user	0m22.052s
+sys	0m1.452s
