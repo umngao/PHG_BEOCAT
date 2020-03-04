@@ -22,6 +22,6 @@ perl: warning: Please check that your locale settings:
     are supported and installed on your system.
 perl: warning: Falling back to the standard locale ("C").
 
-real	0m43.923s
-user	0m35.025s
-sys	0m6.193s
+real	1m5.027s
+user	0m40.730s
+sys	0m9.038s

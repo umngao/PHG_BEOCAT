@@ -31,21 +31,21 @@ perl: warning: Please check that your locale settings:
     are supported and installed on your system.
 perl: warning: Falling back to the standard locale ("C").
 
-real	0m4.451s
-user	0m6.500s
-sys	0m1.165s
+real	0m5.566s
+user	0m7.087s
+sys	0m2.263s
 + [[ -f /tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.mmi ]]
 + echo 'Creating Minimap2 Index for /tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.fa.'
 + /minimap2/minimap2 -d /tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.mmi -k 21 -I 4G -w 11 /tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.fa
-[M::mm_idx_gen::3.273*1.01] collected minimizers
-[M::mm_idx_gen::3.649*1.21] sorted minimizers
-[M::main::4.052*1.18] loaded/built the index for 14305 target sequence(s)
+[M::mm_idx_gen::3.649*1.01] collected minimizers
+[M::mm_idx_gen::4.042*1.19] sorted minimizers
+[M::main::4.481*1.17] loaded/built the index for 14305 target sequence(s)
 [M::mm_idx_stat] kmer size: 21; skip: 11; is_hpc: 0; #seq: 14305
-[M::mm_idx_stat::4.144*1.18] distinct minimizers: 5802329 (72.71% are singletons); average occurrences: 1.419; average spacing: 6.120; total length: 50399943
+[M::mm_idx_stat::4.579*1.17] distinct minimizers: 5802329 (72.71% are singletons); average occurrences: 1.419; average spacing: 6.120; total length: 50399943
 [M::main] Version: 2.17-r974-dirty
 [M::main] CMD: /minimap2/minimap2 -d /tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.mmi -k 21 -I 4G -w 11 /tempFileDir/outputDir/pangenome/wheat1ABD_pangenome_fasta.fa
-[M::main] Real time: 4.192 sec; CPU: 4.938 sec; Peak RSS: 0.334 GB
+[M::main] Real time: 4.625 sec; CPU: 5.386 sec; Peak RSS: 0.334 GB
 
-real	0m4.211s
-user	0m4.146s
-sys	0m0.809s
+real	0m4.662s
+user	0m4.510s
+sys	0m0.897s

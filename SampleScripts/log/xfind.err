@@ -46,41 +46,41 @@ perl: warning: Please check that your locale settings:
 	LANG = "en_US.UTF-8"
     are supported and installed on your system.
 perl: warning: Falling back to the standard locale ("C").
-[M::main::0.555*1.00] loaded/built the index for 14305 target sequence(s)
-[M::mm_mapopt_update::0.555*1.00] mid_occ = 1000
+[M::main::0.701*1.02] loaded/built the index for 14305 target sequence(s)
+[M::mm_mapopt_update::0.701*1.02] mid_occ = 1000
 [M::mm_idx_stat] kmer size: 21; skip: 11; is_hpc: 0; #seq: 14305
-[M::mm_idx_stat::0.640*1.00] distinct minimizers: 5802329 (72.71% are singletons); average occurrences: 1.419; average spacing: 6.120; total length: 50399943
-[M::worker_pipeline::11.468*2.43] mapped 574713 sequences
-[M::worker_pipeline::15.628*1.84] mapped 574713 sequences
-[M::worker_pipeline::17.218*1.68] mapped 130164 sequences
+[M::mm_idx_stat::0.807*1.01] distinct minimizers: 5802329 (72.71% are singletons); average occurrences: 1.419; average spacing: 6.120; total length: 50399943
+[M::worker_pipeline::10.507*2.68] mapped 574713 sequences
+[M::worker_pipeline::14.730*1.98] mapped 574713 sequences
+[M::worker_pipeline::16.450*1.78] mapped 130164 sequences
 [M::main] Version: 2.17-r974-dirty
 [M::main] CMD: minimap2 -ax sr -t 14 --secondary=yes -N20 --eqx /tempFileDir/outputDir//pangenome/wheat1ABD_pangenome_fasta.mmi /tempFileDir/data/fastq/AC_Avonlea.fq.gz
-[M::main] Real time: 17.251 sec; CPU: 28.900 sec; Peak RSS: 0.680 GB
+[M::main] Real time: 16.483 sec; CPU: 29.349 sec; Peak RSS: 0.685 GB
 [M::main::0.623*1.00] loaded/built the index for 14305 target sequence(s)
 [M::mm_mapopt_update::0.623*1.00] mid_occ = 1000
 [M::mm_idx_stat] kmer size: 21; skip: 11; is_hpc: 0; #seq: 14305
-[M::mm_idx_stat::0.717*1.00] distinct minimizers: 5802329 (72.71% are singletons); average occurrences: 1.419; average spacing: 6.120; total length: 50399943
-[M::worker_pipeline::9.456*2.92] mapped 574713 sequences
-[M::worker_pipeline::12.787*2.22] mapped 574713 sequences
-[M::worker_pipeline::14.614*1.96] mapped 152130 sequences
+[M::mm_idx_stat::0.719*1.00] distinct minimizers: 5802329 (72.71% are singletons); average occurrences: 1.419; average spacing: 6.120; total length: 50399943
+[M::worker_pipeline::7.846*3.35] mapped 574713 sequences
+[M::worker_pipeline::13.084*2.07] mapped 574713 sequences
+[M::worker_pipeline::13.993*1.96] mapped 152130 sequences
 [M::main] Version: 2.17-r974-dirty
 [M::main] CMD: minimap2 -ax sr -t 14 --secondary=yes -N20 --eqx /tempFileDir/outputDir//pangenome/wheat1ABD_pangenome_fasta.mmi /tempFileDir/data/fastq/Buteo.fq.gz
-[M::main] Real time: 14.636 sec; CPU: 28.639 sec; Peak RSS: 2.097 GB
-[M::main::0.618*1.00] loaded/built the index for 14305 target sequence(s)
-[M::mm_mapopt_update::0.619*1.00] mid_occ = 1000
+[M::main] Real time: 14.027 sec; CPU: 27.394 sec; Peak RSS: 1.845 GB
+[M::main::0.591*1.00] loaded/built the index for 14305 target sequence(s)
+[M::mm_mapopt_update::0.591*1.00] mid_occ = 1000
 [M::mm_idx_stat] kmer size: 21; skip: 11; is_hpc: 0; #seq: 14305
-[M::mm_idx_stat::0.706*1.00] distinct minimizers: 5802329 (72.71% are singletons); average occurrences: 1.419; average spacing: 6.120; total length: 50399943
-[M::worker_pipeline::9.074*2.77] mapped 549451 sequences
-[M::worker_pipeline::13.371*3.11] mapped 549451 sequences
-[M::worker_pipeline::16.676*2.54] mapped 549451 sequences
-[M::worker_pipeline::19.838*2.16] mapped 363089 sequences
+[M::mm_idx_stat::0.683*1.00] distinct minimizers: 5802329 (72.71% are singletons); average occurrences: 1.419; average spacing: 6.120; total length: 50399943
+[M::worker_pipeline::7.161*3.55] mapped 549451 sequences
+[M::worker_pipeline::10.572*3.75] mapped 549451 sequences
+[M::worker_pipeline::16.866*2.40] mapped 549451 sequences
+[M::worker_pipeline::19.270*2.13] mapped 363089 sequences
 [M::main] Version: 2.17-r974-dirty
 [M::main] CMD: minimap2 -ax sr -t 14 --secondary=yes -N20 --eqx /tempFileDir/outputDir//pangenome/wheat1ABD_pangenome_fasta.mmi /tempFileDir/data/fastq/CDC_Rama.fq.gz
-[M::main] Real time: 19.872 sec; CPU: 42.978 sec; Peak RSS: 3.084 GB
+[M::main] Real time: 19.306 sec; CPU: 41.151 sec; Peak RSS: 2.872 GB
 
-real	0m57.295s
-user	2m14.655s
-sys	0m14.601s
+real	0m56.514s
+user	2m19.924s
+sys	0m15.269s
 + /tassel-5-standalone/run_pipeline.pl -debug -Xmx60G -configParameters /tempFileDir/data/config.txt -HaplotypeGraphBuilderPlugin -configFile /tempFileDir/data/config.txt -methods CONSENSUS,refRegionGroup -includeVariantContexts false -includeSequences false -endPlugin -BestHaplotypePathPlugin -keyFile /tempFileDir/data/fastq/key_pathKeyFile.txt -outDir /tempFileDir/outputDir//hap_count_best_path -readMethod HAP_COUNT_METHOD -pathMethod PATH_METHOD2 -endPlugin
 perl: warning: Setting locale failed.
 perl: warning: Please check that your locale settings:
@@ -91,6 +91,6 @@ perl: warning: Please check that your locale settings:
     are supported and installed on your system.
 perl: warning: Falling back to the standard locale ("C").
 
-real	0m6.562s
-user	0m22.052s
-sys	0m1.452s
+real	0m7.255s
+user	0m24.424s
+sys	0m1.726s
