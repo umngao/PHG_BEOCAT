@@ -1,4 +1,6 @@
-# singularity build --sandbox phg.sandbox.200302.simg docker://maizegenetics/phg > build.sand.out 2> build.sand.err &
+# singularity build --sandbox phg.200302.simg docker://maizegenetics/phg > build.sand.out 2> build.sand.err &
+# singularity build phg.200302.simg docker://maizegenetics/phg:0.0.17 > phg.build.out 2> phg.build.err &
+
 sh loadRefRanges_chrom1A1B1D.sh > log/xload.out 2> log/xload.err
 sh loadGVCFfromGroovy_docker.sh > log/xloadGVCF.out 2> log/xloadGVCF.err
 

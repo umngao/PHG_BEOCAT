@@ -1,8 +1,8 @@
 
 
-base_dir="/homes/${USER}/workshop/PHG/BEOCAT"
-keyfile="/homes/${USER}/workshop/PHG/wheat_docker2/DataFolders/asub_gvcf_keyfile.txt"
-gvcf_in_dir="/homes/lianggao/workshop/PHG/wheat_docker2/gvcf/"
+base_dir="/bulk/${USER}/workshop/PHG/BEOCAT"
+keyfile="/bulk/${USER}/workshop/PHG/wheat_docker2/DataFolders/asub_gvcf_keyfile.txt"
+gvcf_in_dir="/bulk/lianggao/workshop/PHG/wheat_docker2/gvcf/"
 
 cp $keyfile "$base_dir"/data/keyfile.txt
 mkdir "$base_dir"/data/gvcfs

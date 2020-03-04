@@ -12,7 +12,6 @@ Xmx=60G
 assemblyEntryPoint=all
 
 # create haplotypes from gvcf parameters
-referenceFasta=/tempFileDir/data/reference/reference.fa
 LoadHaplotypesFromGVCFPlugin.keyFile=/tempFileDir/data/keyfile.txt
 LoadHaplotypesFromGVCFPlugin.gvcfDir=/tempFileDir/data/gvcfs/
 LoadHaplotypesFromGVCFPlugin.referenceFasta=/tempFileDir/data/reference/reference.fa

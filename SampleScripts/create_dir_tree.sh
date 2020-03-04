@@ -23,11 +23,11 @@
 ## 3) Path to intervals (.bed) file defining reference ranges
 ## 4) Path to config file (example at https://github.com/etnite/wheat_phg/blob/master/config_files/config.txt)
 ## 5) Path to reference loading file (example at https://github.com/etnite/wheat_phg/blob/master/config_files/load_reference.txt)
-base_dir="/homes/lianggao/workshop/PHG/BEOCAT"
-ref="/homes/lianggao/workshop/PHG/wheat_docker2/DataFolders/reference/wheat_chr1A1B1D.fa"
-intervals_file="/homes/lianggao/workshop/PHG/wheat_docker2/DataFolders/wheat1A1B1D.bed"
-config_file="/homes/lianggao/workshop/PHG/wheat_docker2/DataFolders/configSQLite.txt"
-ref_load_file="/homes/lianggao/workshop/PHG/wheat_docker2/DataFolders/wheat_load_data.txt"
+base_dir="/bulk/lianggao/workshop/PHG/BEOCAT"
+ref="/bulk/lianggao/workshop/PHG/wheat_docker2/DataFolders/reference/wheat_chr1A1B1D.fa"
+intervals_file="/bulk/lianggao/workshop/PHG/wheat_docker2/DataFolders/wheat1A1B1D.bed"
+config_file="/bulk/lianggao/workshop/PHG/wheat_docker2/DataFolders/configSQLite.txt"
+ref_load_file="/bulk/lianggao/workshop/PHG/wheat_docker2/DataFolders/wheat_load_data.txt"
 
 
 #### Executable ####
