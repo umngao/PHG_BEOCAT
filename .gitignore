@@ -10,9 +10,10 @@
 !SampleScripts/*/*/*/*
 !SampleScripts/*/*/*/*/*
 !data/
-!data/config.txt
-!data/keyfile.txt
-!data/ref_load_data.txt
+!data/*.txt
+!data/fastq/
+!data/fastq/*.txt
+
 !archive/
 !archive/*
 !archive/*/*

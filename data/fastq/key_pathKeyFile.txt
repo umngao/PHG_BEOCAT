@@ -1,0 +1,4 @@
+SampleName	ReadMappingIds	LikelyParents
+AC_Avonlea	1		
+Buteo	2		
+CDC_Rama	3		

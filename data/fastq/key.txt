@@ -1,0 +1,4 @@
+cultivar	flowcell_lane	filename	PlateID
+AC_Avonlea	C168LACXX_4	AC_Avonlea.fq.gz	gbs
+Buteo	C168LACXX_4	Buteo.fq.gz	gbs
+CDC_Rama	C168LACXX_4	CDC_Rama.fq.gz	gbs
