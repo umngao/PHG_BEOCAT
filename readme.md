@@ -3,7 +3,7 @@
 ## main wiki: https://bitbucket.org/bucklerlab/practicalhaplotypegraph/wiki/Home
 
 ## (1) build PHG container singularity image:
-singularity build phg.200302.simg docker://maizegenetics/phg:0.0.17 > phg.build.out 2> phg.build.err &
+singularity pull phg.200302.simg docker://maizegenetics/phg:0.0.17 > phg.build.out 2> phg.build.err &
 
 ## (2) prepare folder structure
 sh create_dir_tree.sh
